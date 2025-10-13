@@ -3,10 +3,23 @@ import os
 import pkgutil
 import typing
 import settings
-from typing import Set, Dict, Any, Callable
+from typing import Set, Dict, Any, Callable, Optional
 
 from BaseClasses import CollectionState, Region
 from worlds.AutoWorld import World
+from worlds.LauncherComponents import Component, Type, components, launch_subprocess
+
+def launch_client():
+    """Launch a Rb3 client"""
+    from .client import launch
+    launch_subprocess(launch, name="NepRb3Client")
+
+components.append(Component(
+    "Hyperdimension Neptunia Re;Birth3 V GENERATION Client",
+    "NepRb3Client",
+    func=launch_client,
+    component_type=Type.CLIENT
+))
 
 from .items import NepRb3Item, item_data
 from .locations import NepRb3Location
