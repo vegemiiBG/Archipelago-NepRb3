@@ -2311,7 +2311,7 @@ dungeon_unlock_57                  = "Dungeon Unlock - Under Inverse Depths"
 dungeon_unlock_58                  = "Dungeon Unlock - Planeptune Alley"
 dungeon_unlock_59                  = "Dungeon Unlock - Suaho Mountain Range"
 dungeon_unlock_60                  = "Dungeon Unlock - Suaho Mountain Peak"
-dungeon_unlock_61                  = "Dungeon Unlock - Keraga Dimnension"
+dungeon_unlock_61                  = "Dungeon Unlock - Keraga Dimension"
 dungeon_unlock_62                  = "Dungeon Unlock - So Shal Forest"
 dungeon_unlock_63                  = "Dungeon Unlock - Adaldik Forest"
 dungeon_unlock_64                  = "Dungeon Unlock - Pii Shii Game Factory"
@@ -2319,5 +2319,15 @@ dungeon_unlock_65                  = "Dungeon Unlock - Do Temple"
 #dungeon_unlock_66                 = "Dungeon Unlock - Game Dimension" Yeah this is probably not a good idea
 dungeon_unlock_67                  = "Dungeon Unlock - Digital Future Land"
 dungeon_unlock_68                  = "Dungeon Unlock - Digital Future Depths"
+
+#Treasure List
+vfsz_treasure1                     = "Virtua Forest Safe Zone - Treasure 1"
+vfsz_treasure2                     = "Virtua Forest Safe Zone - Treasure 2"
+vfsz_treasure3                     = "Virtua Forest Safe Zone - Treasure 3"
+vfsz_treasure4                     = "Virtua Forest Safe Zone - Treasure 4"
+stationArea_treasure1              = "Station Area - Treasure 1"
+stationArea_treasure2              = "Station Area - Treasure 2"
+stationArea_treasure3              = "Station Area - Treasure 3"
+stationArea_treasure4              = "Station Area - Treasure 4"
 
 ItemName.cpu_aegis_ornament: ItemData(x, xxx, xxxxxx, x)
