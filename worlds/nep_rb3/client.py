@@ -22,6 +22,8 @@ from worlds.AutoWorld import World
 from .Rb3MemoryInterface import Rb3MemoryInterface
 from .treasures.dungeon_treasures import *
 
+from .names import InternalItemIDs
+
 class Rb3Context(CommonContext):
     """Hyperdimension Neptunia ReBirth3 Game Context"""
     def __init__(self, server_address: Optional[str], password: Optional[str]) -> None:
@@ -102,6 +104,11 @@ async def rb3_watcher(ctx: Rb3Context):
             if ctx.slot is not None:
                 #logger.info(f"Base pointer is {ctx.rb3_interface.rb3_basePointer}")
                 #logger.info(f"Save data starts at {ctx.rb3_interface.rb3_savePointer}")
+
+                logger.info(f"Inventory has {ctx.rb3_interface._current_item_count()} unique items")
+
+                logger.info(f"Player currently has {ctx.rb3_interface._get_item_amount(ctx.rb3_interface._get_item_slot(InternalItemIDs.FRAGMENT_LIFE))} Life Fragments")
+                
 
                 for i in range(len(ctx.rb3_interface.vfszTreasureData)):
                     if ctx.rb3_interface.vfszTreasureFlags[i] == 0:

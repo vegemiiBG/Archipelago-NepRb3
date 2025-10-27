@@ -1,4 +1,4 @@
-location_base_id = location_base_id = 7489397493
+location_base_id = 7489397493
 
 class LocationData:
     def __init__(self, name, id_, itemType):
