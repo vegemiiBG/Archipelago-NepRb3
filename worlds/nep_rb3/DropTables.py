@@ -2,8 +2,9 @@ from typing import List, Tuple
 from .names import InternalItemIDs as IDs
 
 class InternalItem:
-    itemID: int
-    amount: int
+    def __init__(self, itemID, amount):
+        self.itemID = itemID
+        self.amount = amount
 
 # Dungeon ID 1
 vfsz_treasure1 = [InternalItem(IDs.HEALING_GRASS, 2)]
@@ -127,3 +128,5 @@ gigoDepths_treasure2 = [InternalItem(IDs.HEALING_POD, 2)]
 gigoDepths_treasure3 = [InternalItem(IDs.SPCHARGER_P, 1)]
 gigoDepths_treasure4 = [InternalItem(IDs.FRAGMENT_LIFE, 1)]
 gigoDepths_treasure5 = [InternalItem(IDs.FRAGMENT_LIFE, 2)]
+
+testTreasure = [InternalItem(IDs.ARMOR_EXEQUIP, 1), InternalItem(IDs.FRAGMENT_LUMP, 17), InternalItem(IDs.HEALING_DRINK, 1), InternalItem(IDs.WEAPON_EXCALIBUR, 1)]

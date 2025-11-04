@@ -24,6 +24,8 @@ from .treasures.dungeon_treasures import *
 
 from .names import InternalItemIDs
 
+from . import DropTables
+
 class Rb3Context(CommonContext):
     """Hyperdimension Neptunia ReBirth3 Game Context"""
     def __init__(self, server_address: Optional[str], password: Optional[str]) -> None:
@@ -108,6 +110,8 @@ async def rb3_watcher(ctx: Rb3Context):
                 logger.info(f"Inventory has {ctx.rb3_interface._current_item_count()} unique items")
 
                 logger.info(f"Player currently has {ctx.rb3_interface._get_item_amount(ctx.rb3_interface._get_item_slot(InternalItemIDs.FRAGMENT_LIFE))} Life Fragments")
+
+                ctx.rb3_interface.insert_drop_table(DropTables.testTreasure)
                 
 
                 for i in range(len(ctx.rb3_interface.vfszTreasureData)):
