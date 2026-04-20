@@ -1,3 +1,4 @@
+import typing
 from ..LocationData import LocationData
 
 EmEsMagmaCave: typing.List[LocationData] = (

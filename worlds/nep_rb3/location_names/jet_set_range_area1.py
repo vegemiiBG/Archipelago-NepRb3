@@ -1,3 +1,4 @@
+import typing
 from ..LocationData import LocationData
 
 JetSetRange1: typing.List[LocationData] = (

@@ -1,3 +1,4 @@
+import typing
 from ..LocationData import LocationData
 
 KoaguraPlateau: typing.List[LocationData] = (

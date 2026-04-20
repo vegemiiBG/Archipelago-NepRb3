@@ -1,3 +1,4 @@
+import typing
 from ..LocationData import LocationData
 
 KuzaratFacility1: typing.List[LocationData] = (

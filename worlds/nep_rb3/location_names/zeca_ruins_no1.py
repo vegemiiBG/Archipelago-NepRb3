@@ -1,3 +1,4 @@
+import typing
 from ..LocationData import LocationData
 
 ZecaRuinsNo1: typing.List[LocationData] = (

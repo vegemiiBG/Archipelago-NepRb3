@@ -1,3 +1,4 @@
+import typing
 from ..LocationData import LocationData
 
 LoweeCastleNorthernSpace: typing.List[LocationData] = (
