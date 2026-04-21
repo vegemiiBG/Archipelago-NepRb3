@@ -46,29 +46,10 @@ class NepRb3World(World):
         self.disabled_locations = set()
         # Create regions.
         region = Region("Menu", self.player, self.multiworld)
- 
-        for index, location in enumerate(all_locations):
-            self.disabled_locations.update([location.name for location in gathers])
 
         for index, location in enumerate(all_locations):
             if location.name not in self.disabled_locations:
-                if "Herb" in location.name:
-                    self.item_pool.append(self.create_item("Herb"))
-
-                if "Dogoo Jelly" in location.name:
-                    self.item_pool.append(self.create_item("Dogoo Jelly"))
-
-                if "Coin Fragment" in location.name:
-                    self.item_pool.append(self.create_item("Coin Fragment"))
-
-                if "Sunflowery Seed" in location.name:
-                    self.item_pool.append(self.create_item("Sunflowery Seed"))
-
-                if "Yellow Petal" in location.name:
-                    self.item_pool.append(self.create_item("Yellow Petal"))
-
-                if "Lizard Scale" in location.name:
-                    self.item_pool.append(self.create_item("Lizard Scale"))
+                self.item_pool.append(self.create_item("ORNAMENT_BLESSEDBAND"))
 
                 region.add_locations({location.name: location.id}, NepRb3Location)
 

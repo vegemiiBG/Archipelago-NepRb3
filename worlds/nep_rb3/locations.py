@@ -1,17 +1,17 @@
 import typing
 from BaseClasses import Location
-from .location_names.virtua_forest_safe_zone import VirtuaForestSafeZone
+from .location_names import gathers
 from .LocationData import LocationData
 
 ap_location_base_id = 696969
 class NepRb3Location(Location):
     game = "Hyperdimension Neptunia Re;Birth3 V GENERATION"
     
-gathers: typing.List[LocationData] = (
-VirtuaForestSafeZone
-)
-all_locations: typing.List[LocationData] = (
-    gathers
-)
+
+all_locations: typing.List[LocationData] = ()
+
+for map in gathers:
+    all_locations += map
+
 
 location_table: typing.Dict[str, int] = {location.name: location.id for location in all_locations}

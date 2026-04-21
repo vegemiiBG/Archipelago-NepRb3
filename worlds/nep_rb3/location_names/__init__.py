@@ -136,4 +136,4 @@ gathers: typing.List[LocationData] = (
     ZecaRuinsNo1,
     ZecaRuinsNo2,
     ZegaForest,
-),
+)
