@@ -2330,4 +2330,3 @@ stationArea_treasure2              = "Station Area - Treasure 2"
 stationArea_treasure3              = "Station Area - Treasure 3"
 stationArea_treasure4              = "Station Area - Treasure 4"
 
-ItemName.cpu_aegis_ornament: ItemData(x, xxx, xxxxxx, x)

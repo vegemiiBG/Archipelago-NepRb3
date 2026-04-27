@@ -50,8 +50,6 @@ class NepRb3World(World):
 
         for index, location in enumerate(all_locations):
             if location.name not in self.disabled_locations:
-                self.item_pool.append(self.create_item("ORNAMENT_BLESSEDBAND"))
-
                 region.add_locations({location.name: location.id}, NepRb3Location)
 
         self.multiworld.itempool += self.item_pool
@@ -66,17 +64,17 @@ class NepRb3World(World):
         item_pool.append(self.create_item("KEYITEM_DRAWING"))
 
         for DungeonName in dungeonItemList.keys():
-            item_pool.append(self.create_item(DungeonName.itemName))
+            item_pool.append(self.create_item(DungeonName))
 ##...
 ##item_pool length == total number of locations   
 ##...
 ##...
-        numbersOfItemsInTheGame = self.multiworld.get_unfilled_locations(self.player)
+        numbersOfItemsInTheGame = len(self.multiworld.get_unfilled_locations(self.player))
         while numbersOfItemsInTheGame > len(item_pool):
-            if self.random.random(100) > 55:
-                item_pool.append(self.create_item(useful_items[self.random.random(len(useful_items))]))
+            if self.random.randrange(0,100) > 55:
+                item_pool.append(self.create_item(useful_items[self.random.randrange(0,len(useful_items))]))
             else:
-                item_pool.append(self.create_item(filler_items[self.random.random(len(filler_items))]))
+                item_pool.append(self.create_item(filler_items[self.random.randrange(0,len(filler_items))]))
         self.multiworld.itempool += item_pool
     
     def get_filler_item_name(self) -> str:
