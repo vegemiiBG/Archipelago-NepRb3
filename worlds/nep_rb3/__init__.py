@@ -3,6 +3,7 @@ import os
 import pkgutil
 import typing
 import settings
+from .items import dungeonItemList, filler_items, useful_items
 from typing import Set, Dict, Any, Callable, Optional
 
 from BaseClasses import CollectionState, Region
@@ -21,7 +22,7 @@ components.append(Component(
     component_type=Type.CLIENT
 ))
 
-from .items import NepRb3Item, item_data
+from .items import NepRb3Item, item_data, allItemData
 from .locations import NepRb3Location
 from .options import NepRb3Options
 from .locations import all_locations, gathers, location_table
@@ -34,13 +35,13 @@ class NepRb3World(World):
     options_dataclass = NepRb3Options
     location_name_to_id = {loc_data.name: loc_data.id for loc_data in all_locations}
 
-    item_name_to_id = {name: data.code for name, data in item_data.items()}
+    item_name_to_id = {name: data.code for name, data in allItemData.items()}
     item_pool: list[NepRb3Item] = []
 
     disabled_locations = Set[str]
 
     def create_item(self, name: str) -> NepRb3Item:
-        return NepRb3Item(name, item_data[name].type, item_data[name].code, self.player)
+        return NepRb3Item(name, allItemData[name].type, allItemData[name].code, self.player)
 
     def create_regions(self) -> None:
         self.disabled_locations = set()
@@ -56,6 +57,28 @@ class NepRb3World(World):
         self.multiworld.itempool += self.item_pool
         self.multiworld.regions.append(region)
 
+    def create_items(self) -> None:
+        item_pool= []
+        item_pool.append(self.create_item("KEYITEM_PUDDING"))
+        item_pool.append(self.create_item("KEYITEM_SYRINGE"))
+        item_pool.append(self.create_item("KEYITEM_NOTEBOOK"))
+        item_pool.append(self.create_item("KEYITEM_DOLL"))
+        item_pool.append(self.create_item("KEYITEM_DRAWING"))
+
+        for DungeonName in dungeonItemList.keys():
+            item_pool.append(self.create_item(DungeonName.itemName))
+##...
+##item_pool length == total number of locations   
+##...
+##...
+        numbersOfItemsInTheGame = self.multiworld.get_unfilled_locations(self.player)
+        while numbersOfItemsInTheGame > len(item_pool):
+            if self.random.random(100) > 55:
+                item_pool.append(self.create_item(useful_items[self.random.random(len(useful_items))]))
+            else:
+                item_pool.append(self.create_item(filler_items[self.random.random(len(filler_items))]))
+        self.multiworld.itempool += item_pool
+    
     def get_filler_item_name(self) -> str:
         return
 

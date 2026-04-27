@@ -1,8 +1,8 @@
 from typing import NamedTuple, Optional
 
 from BaseClasses import Item, ItemClassification
-
-
+from .names import ItemNames
+apDungeonItemBaseID = 2_000_000
 class NepRb3Item(Item):
     game = "Hyperdimension Neptunia Re;Birth3 V GENERATION"
 
@@ -2229,3 +2229,58 @@ item_data: dict[str, NepRb3ItemData] = {
     "CHIPS_DRILL":                                    NepRb3ItemData(4283,ItemClassification.filler)
     # fmt: on
 }
+dungeonItemList: dict[str, NepRb3ItemData] = {
+    ItemNames.dungeon_unlock_1: NepRb3ItemData(apDungeonItemBaseID + 1,  ItemClassification.progression),
+    ItemNames.dungeon_unlock_2: NepRb3ItemData(apDungeonItemBaseID + 2,  ItemClassification.progression),
+    ItemNames.dungeon_unlock_3: NepRb3ItemData(apDungeonItemBaseID + 3,  ItemClassification.progression),
+    ItemNames.dungeon_unlock_4: NepRb3ItemData(apDungeonItemBaseID + 4,  ItemClassification.progression),
+    ItemNames.dungeon_unlock_6: NepRb3ItemData(apDungeonItemBaseID + 6,  ItemClassification.progression),
+    ItemNames.dungeon_unlock_8: NepRb3ItemData(apDungeonItemBaseID + 8,  ItemClassification.progression),
+    ItemNames.dungeon_unlock_9: NepRb3ItemData(apDungeonItemBaseID + 9,  ItemClassification.progression),
+    ItemNames.dungeon_unlock_10: NepRb3ItemData(apDungeonItemBaseID + 10,  ItemClassification.progression),
+    ItemNames.dungeon_unlock_11: NepRb3ItemData(apDungeonItemBaseID + 11,  ItemClassification.progression),
+    ItemNames.dungeon_unlock_12: NepRb3ItemData(apDungeonItemBaseID + 12,  ItemClassification.progression),
+    ItemNames.dungeon_unlock_13: NepRb3ItemData(apDungeonItemBaseID + 13,  ItemClassification.progression),
+    ItemNames.dungeon_unlock_16: NepRb3ItemData(apDungeonItemBaseID + 16,  ItemClassification.progression),
+    ItemNames.dungeon_unlock_17: NepRb3ItemData(apDungeonItemBaseID + 17,  ItemClassification.progression),
+    ItemNames.dungeon_unlock_19: NepRb3ItemData(apDungeonItemBaseID + 19,  ItemClassification.progression),
+    ItemNames.dungeon_unlock_20: NepRb3ItemData(apDungeonItemBaseID + 20,  ItemClassification.progression),
+    ItemNames.dungeon_unlock_21: NepRb3ItemData(apDungeonItemBaseID + 21,  ItemClassification.progression),
+    ItemNames.dungeon_unlock_22: NepRb3ItemData(apDungeonItemBaseID + 22,  ItemClassification.progression),
+    ItemNames.dungeon_unlock_23: NepRb3ItemData(apDungeonItemBaseID + 23,  ItemClassification.progression),
+    ItemNames.dungeon_unlock_25: NepRb3ItemData(apDungeonItemBaseID + 25,  ItemClassification.progression),
+    ItemNames.dungeon_unlock_27: NepRb3ItemData(apDungeonItemBaseID + 27,  ItemClassification.progression),
+    ItemNames.dungeon_unlock_28: NepRb3ItemData(apDungeonItemBaseID + 28,  ItemClassification.progression),
+    ItemNames.dungeon_unlock_29: NepRb3ItemData(apDungeonItemBaseID + 29,  ItemClassification.progression),
+    ItemNames.dungeon_unlock_31: NepRb3ItemData(apDungeonItemBaseID + 31,  ItemClassification.progression),
+    ItemNames.dungeon_unlock_33: NepRb3ItemData(apDungeonItemBaseID + 33,  ItemClassification.progression),
+    ItemNames.dungeon_unlock_34: NepRb3ItemData(apDungeonItemBaseID + 34,  ItemClassification.progression),
+    ItemNames.dungeon_unlock_35: NepRb3ItemData(apDungeonItemBaseID + 35,  ItemClassification.progression),
+    ItemNames.dungeon_unlock_36: NepRb3ItemData(apDungeonItemBaseID + 36,  ItemClassification.progression),
+    ItemNames.dungeon_unlock_37: NepRb3ItemData(apDungeonItemBaseID + 37,  ItemClassification.progression),
+    ItemNames.dungeon_unlock_39: NepRb3ItemData(apDungeonItemBaseID + 39,  ItemClassification.progression),
+    ItemNames.dungeon_unlock_40: NepRb3ItemData(apDungeonItemBaseID + 40,  ItemClassification.progression),
+    ItemNames.dungeon_unlock_41: NepRb3ItemData(apDungeonItemBaseID + 41,  ItemClassification.progression),
+    ItemNames.dungeon_unlock_42: NepRb3ItemData(apDungeonItemBaseID + 42,  ItemClassification.progression),
+    ItemNames.dungeon_unlock_43: NepRb3ItemData(apDungeonItemBaseID + 43,  ItemClassification.progression),
+    ItemNames.dungeon_unlock_44: NepRb3ItemData(apDungeonItemBaseID + 44,  ItemClassification.progression),
+    ItemNames.dungeon_unlock_46: NepRb3ItemData(apDungeonItemBaseID + 46,  ItemClassification.progression),
+    ItemNames.dungeon_unlock_48: NepRb3ItemData(apDungeonItemBaseID + 48,  ItemClassification.progression),
+    ItemNames.dungeon_unlock_50: NepRb3ItemData(apDungeonItemBaseID + 50,  ItemClassification.progression),
+    ItemNames.dungeon_unlock_52: NepRb3ItemData(apDungeonItemBaseID + 52,  ItemClassification.progression),
+    ItemNames.dungeon_unlock_53: NepRb3ItemData(apDungeonItemBaseID + 53,  ItemClassification.progression),
+    ItemNames.dungeon_unlock_54: NepRb3ItemData(apDungeonItemBaseID + 54,  ItemClassification.progression),
+    ItemNames.dungeon_unlock_56: NepRb3ItemData(apDungeonItemBaseID + 56,  ItemClassification.progression),
+    ItemNames.dungeon_unlock_58: NepRb3ItemData(apDungeonItemBaseID + 58,  ItemClassification.progression),
+    ItemNames.dungeon_unlock_59: NepRb3ItemData(apDungeonItemBaseID + 59,  ItemClassification.progression),
+    ItemNames.dungeon_unlock_61: NepRb3ItemData(apDungeonItemBaseID + 61,  ItemClassification.progression),
+    ItemNames.dungeon_unlock_62: NepRb3ItemData(apDungeonItemBaseID + 62,  ItemClassification.progression),
+    ItemNames.dungeon_unlock_63: NepRb3ItemData(apDungeonItemBaseID + 63,  ItemClassification.progression),
+    ItemNames.dungeon_unlock_64: NepRb3ItemData(apDungeonItemBaseID + 64,  ItemClassification.progression),
+    ItemNames.dungeon_unlock_65: NepRb3ItemData(apDungeonItemBaseID + 65,  ItemClassification.progression),
+    ItemNames.dungeon_unlock_67: NepRb3ItemData(apDungeonItemBaseID + 67,  ItemClassification.progression),
+}
+
+allItemData = item_data|dungeonItemList
+filler_items = [name for name,data in item_data.items() if data.type == ItemClassification.filler]
+useful_items = [name for name,data in item_data.items() if data.type == ItemClassification.useful]
