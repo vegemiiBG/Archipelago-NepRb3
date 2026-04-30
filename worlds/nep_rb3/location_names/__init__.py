@@ -51,6 +51,7 @@ from .powerlevel_island_interior import *
 from .ps_dimension import *
 from .reload_grasslands import *
 from .rud_arms_sewer_n import *
+from .rud_arms_sewer_s import *
 from .so_shal_forest import *
 from .soni_wetlands import *
 from .station_area import *
@@ -118,6 +119,8 @@ gathers: typing.List[LocationData] = (
     PowerlevelIslandInterior,
     PSDimension,
     ReloadGrasslands,
+    RudArmsSewerN,
+    RudArmsSewerS,
     SoShalForest,
     SoniWetlands,
     StationArea,
@@ -186,6 +189,8 @@ treasures: typing.List[LocationData] = (
     PowerlevelIslandInteriorTreasures,
     PSDimensionTreasures,
     ReloadGrasslandsTreasures,
+    RudArmsSewerNTreasures,
+    RudArmsSewerSTreasures,
     SoShalForestTreasures,
     SoniWetlandsTreasures,
     StationAreaTreasures,

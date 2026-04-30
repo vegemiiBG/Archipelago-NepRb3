@@ -1,18 +1,18 @@
 import typing
 from ..LocationData import LocationData
 
-RudArmsSewerS: typing.List[LocationData] = (
-LocationData("Rud Arms Sewer S. - Gather 1", 12_1, 0),
-LocationData("Rud Arms Sewer S. - Gather 2", 12_2, 0),
-LocationData("Rud Arms Sewer S. - Gather 3", 12_3, 0),
-LocationData("Rud Arms Sewer S. - Gather 4", 12_4, 0),
-LocationData("Rud Arms Sewer S. - Gather 5", 12_5, 0),
-LocationData("Rud Arms Sewer S. - Gather 6", 12_6, 0),
+RudArmsSewerN: typing.List[LocationData] = (
+LocationData("Rud Arms Sewer N. - Gather 1", 11_1, 0),
+LocationData("Rud Arms Sewer N. - Gather 2", 11_2, 0),
+LocationData("Rud Arms Sewer N. - Gather 3", 11_3, 0),
+LocationData("Rud Arms Sewer N. - Gather 4", 11_4, 0),
+LocationData("Rud Arms Sewer N. - Gather 5", 11_5, 0),
+LocationData("Rud Arms Sewer N. - Gather 6", 11_6, 0),
 )
 
-RudArmsSewerSTreasures: typing.List[LocationData] = (
-LocationData("Rud Arms Sewer S. - Treasure 1", 12_1, "Treasure"),
-LocationData("Rud Arms Sewer S. - Treasure 2", 12_2, "Treasure"),
-LocationData("Rud Arms Sewer S. - Treasure 3", 12_3, "Treasure"),
-LocationData("Rud Arms Sewer S. - Treasure 4", 12_4, "Treasure"),
+RudArmsSewerNTreasures: typing.List[LocationData] = (
+LocationData("Rud Arms Sewer N. - Treasure 1", 11_1, "Treasure"),
+LocationData("Rud Arms Sewer N. - Treasure 2", 11_2, "Treasure"),
+LocationData("Rud Arms Sewer N. - Treasure 3", 11_3, "Treasure"),
+LocationData("Rud Arms Sewer N. - Treasure 4", 11_4, "Treasure"),
 )
