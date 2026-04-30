@@ -1,5 +1,5 @@
 location_base_id = 7489397493
-treasure_base_id = 2000000
+treasure_base_id = 1000000
 enemy_base_id = 3000000
 
 class LocationData:
