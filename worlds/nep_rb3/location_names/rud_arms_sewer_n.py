@@ -15,4 +15,5 @@ LocationData("Rud Arms Sewer N. - Treasure 1", 11_1, "Treasure"),
 LocationData("Rud Arms Sewer N. - Treasure 2", 11_2, "Treasure"),
 LocationData("Rud Arms Sewer N. - Treasure 3", 11_3, "Treasure"),
 LocationData("Rud Arms Sewer N. - Treasure 4", 11_4, "Treasure"),
+LocationData("Rud Arms Sewer N. - Treasure 5", 11_5, "Treasure"),
 )
