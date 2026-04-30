@@ -8,3 +8,11 @@ LocationData("Graphic Pass Peak - Gather 3", 51_3, 0),
 LocationData("Graphic Pass Peak - Gather 4", 51_4, 0),
 LocationData("Graphic Pass Peak - Gather 5", 51_5, 0),
 )
+
+GraphicPassPeakTreasures: typing.List[LocationData] = (
+LocationData("Graphic Pass Peak - Treasure 1", 51_1, "Treasure"),
+LocationData("Graphic Pass Peak - Treasure 2", 51_2, "Treasure"),
+LocationData("Graphic Pass Peak - Treasure 3", 51_3, "Treasure"),
+LocationData("Graphic Pass Peak - Treasure 4", 51_4, "Treasure"),
+LocationData("Graphic Pass Peak - Treasure 5", 51_5, "Treasure"),
+)

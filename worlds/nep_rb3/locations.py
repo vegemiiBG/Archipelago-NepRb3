@@ -1,6 +1,7 @@
 import typing
 from BaseClasses import Location
 from .location_names import gathers
+from .location_names import treasures
 from .LocationData import LocationData
 
 ap_location_base_id = 696969
@@ -11,6 +12,9 @@ class NepRb3Location(Location):
 all_locations: typing.List[LocationData] = ()
 
 for map in gathers:
+    all_locations += map
+
+for map in treasures:
     all_locations += map
 
 

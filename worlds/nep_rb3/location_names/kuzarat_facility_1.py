@@ -10,3 +10,13 @@ LocationData("Kuzarat Facility 1 - Gather 5", 9_5, 0),
 LocationData("Kuzarat Facility 1 - Gather 6", 9_6, 0),
 LocationData("Kuzarat Facility 1 - Gather 7", 9_7, 0),
 )
+
+KuzaratFacility1Treasures: typing.List[LocationData] = (
+LocationData("Kuzarat Facility 1 - Treasure 1", 9_1, "Treasure"),
+LocationData("Kuzarat Facility 1 - Treasure 2", 9_2, "Treasure"),
+LocationData("Kuzarat Facility 1 - Treasure 3", 9_3, "Treasure"),
+LocationData("Kuzarat Facility 1 - Treasure 4", 9_4, "Treasure"),
+LocationData("Kuzarat Facility 1 - Treasure 5", 9_5, "Treasure"),
+)
+
+
