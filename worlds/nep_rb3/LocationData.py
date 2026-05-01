@@ -3,8 +3,9 @@ treasure_base_id = 1000000
 enemy_base_id = 3000000
 
 class LocationData:
-    def __init__(self, name, id_, itemType):
-        self.name = name
+    def __init__(self,region, name, id_, itemType):
+        self.region = region
+        self.name = f"{region} - {name}"
         self.itemType = itemType
         self.id = id_
 

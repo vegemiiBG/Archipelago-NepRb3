@@ -9,6 +9,8 @@ from typing import Set, Dict, Any, Callable, Optional
 from BaseClasses import CollectionState, Region
 from worlds.AutoWorld import World
 from worlds.LauncherComponents import Component, Type, components, launch_subprocess
+from Rules import set_location_rules
+
 
 def launch_client():
     """Launch a Rb3 client"""
@@ -26,7 +28,8 @@ from .items import NepRb3Item, item_data, allItemData
 from .locations import NepRb3Location
 from .options import NepRb3Options
 from .locations import all_locations, gathers, location_table
-from .names import ItemNames
+from .Regions import Nep3RegionDef
+
 class NepRb3World(World):
     """Nep."""
 
@@ -46,22 +49,19 @@ class NepRb3World(World):
     def create_regions(self) -> None:
         self.disabled_locations = set()
         # Create regions.
-        region = Region("Menu", self.player, self.multiworld)
+        devin = Nep3RegionDef(self.multiworld,self.player,self.options)
+        devin.setup_region_and_locations()
+        devin.create_dungeon_exits()
 
-        for index, location in enumerate(all_locations):
-            if location.name not in self.disabled_locations:
-                region.add_locations({location.name: location.id}, NepRb3Location)
-
-        self.multiworld.itempool += self.item_pool
-        self.multiworld.regions.append(region)
 
     def create_items(self) -> None:
         item_pool= []
-        item_pool.append(self.create_item(ItemNames.neps_pudding))
-        item_pool.append(self.create_item(ItemNames.compas_syringe))
-        item_pool.append(self.create_item(ItemNames.ifs_notebook))
-        item_pool.append(self.create_item(ItemNames.plutia_doll))
-        item_pool.append(self.create_item(ItemNames.peashys_drawing))
+        item_pool.append(self.create_item("KEYITEM_PUDDING"))
+        item_pool.append(self.create_item("KEYITEM_SYRINGE"))
+        item_pool.append(self.create_item("KEYITEM_NOTEBOOK"))
+        item_pool.append(self.create_item("KEYITEM_DOLL"))
+        item_pool.append(self.create_item("KEYITEM_DRAWING"))
+
         for DungeonName in dungeonItemList.keys():
             item_pool.append(self.create_item(DungeonName))
 ##...
@@ -80,6 +80,8 @@ class NepRb3World(World):
         return
 
     def set_rules(self) -> None:
+        set_location_rules(self)
+        self.multiworld.completion_condition[self.player] = lambda state: state.can_reach_region("City Center",self.player)
         return
 
     def fill_slot_data(self) -> dict:
