@@ -26,7 +26,7 @@ from .items import NepRb3Item, item_data, allItemData
 from .locations import NepRb3Location
 from .options import NepRb3Options
 from .locations import all_locations, gathers, location_table
-
+from .names import ItemNames
 class NepRb3World(World):
     """Nep."""
 
@@ -57,12 +57,11 @@ class NepRb3World(World):
 
     def create_items(self) -> None:
         item_pool= []
-        item_pool.append(self.create_item("KEYITEM_PUDDING"))
-        item_pool.append(self.create_item("KEYITEM_SYRINGE"))
-        item_pool.append(self.create_item("KEYITEM_NOTEBOOK"))
-        item_pool.append(self.create_item("KEYITEM_DOLL"))
-        item_pool.append(self.create_item("KEYITEM_DRAWING"))
-
+        item_pool.append(self.create_item(ItemNames.neps_pudding))
+        item_pool.append(self.create_item(ItemNames.compas_syringe))
+        item_pool.append(self.create_item(ItemNames.ifs_notebook))
+        item_pool.append(self.create_item(ItemNames.plutia_doll))
+        item_pool.append(self.create_item(ItemNames.peashys_drawing))
         for DungeonName in dungeonItemList.keys():
             item_pool.append(self.create_item(DungeonName))
 ##...
