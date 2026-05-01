@@ -23,8 +23,8 @@ from .graphic_pass_peak import *
 from .halo_forest import *
 from .haneda_mountain_range import *
 from .haneda_mountain_peak import *
-from .jet_set_range_area1 import *
-from .jet_set_range_area2 import *
+from .jet_set_range import *
+from .jet_set_peak import *
 from .keraga_dimension import *
 from .koagura_plateau import *
 from .kobaba_ruins import *
