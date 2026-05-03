@@ -1,4 +1,4 @@
-#Virtua Forest Safe Zone","ID 1
+#Virtua Forest Safe Zone - ID 1
 import typing
 from ..LocationData import LocationData 
 
