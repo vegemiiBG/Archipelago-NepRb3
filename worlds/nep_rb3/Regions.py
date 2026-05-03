@@ -33,20 +33,13 @@ class Nep3RegionDef:
 
         self.multiworld.regions.append(Region("Menu", self.player, self.multiworld))
 
-    def hasAccessToDungeon(self,player:int,id):
-        #if id == 32:
-        #    return lambda state: state.has(dungeon_unlock_31,self.player)
-        #elif id == otherdungeon:
-        #    return basedungeon
-        return lambda _: True  ## anything goes
-        return lambda state: state.has(item_id_to_name[id+apDungeonItemBaseID],self.player)
-
     def create_dungeon_exits(self):
         menu = self.multiworld.get_region("Menu", self.player)
         newExit:Entrance
         for region in self.regions.values():
             id = DungeonIDs.all_dungeons[region.name]
-            newExit = menu.add_exits([region.name],{region.name:self.hasAccessToDungeon(self.player,id)}) #missing rules
+
+            newExit = menu.add_exits({region.name:region.name}) #missing rules
 
     def create_location(self,location_data: LocationData, region: Region) -> Location:
         location = Rb3Location(self.player, location_data.name, location_data.id, region)

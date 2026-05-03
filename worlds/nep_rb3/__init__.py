@@ -3,14 +3,12 @@ import os
 import pkgutil
 import typing
 import settings
-from .items import dungeonItemList, filler_items, useful_items
+from .items import dungeonItemList, filler_items, useful_items,characterItemList
 from typing import Set, Dict, Any, Callable, Optional
 
 from BaseClasses import CollectionState, Region
 from worlds.AutoWorld import World
 from worlds.LauncherComponents import Component, Type, components, launch_subprocess
-from Rules import set_location_rules
-
 
 def launch_client():
     """Launch a Rb3 client"""
@@ -28,7 +26,9 @@ from .items import NepRb3Item, item_data, allItemData
 from .locations import NepRb3Location
 from .options import NepRb3Options
 from .locations import all_locations, gathers, location_table
+from .names import ItemNames,progressiveGear
 from .Regions import Nep3RegionDef
+from .Rules import set_all_planeptune_dungeons, set_all_lastation_dungeons, set_all_lowee_dungeons, set_all_leanbox_dungeons,set_all_hyper_dungeons, checkDungeonRequirements
 
 class NepRb3World(World):
     """Nep."""
@@ -52,22 +52,47 @@ class NepRb3World(World):
         devin = Nep3RegionDef(self.multiworld,self.player,self.options)
         devin.setup_region_and_locations()
         devin.create_dungeon_exits()
+        set_all_planeptune_dungeons(self)
+        set_all_lastation_dungeons(self)
+        set_all_lowee_dungeons(self)
+        set_all_leanbox_dungeons(self)
+        set_all_hyper_dungeons(self)
 
 
     def create_items(self) -> None:
         item_pool= []
-        item_pool.append(self.create_item("KEYITEM_PUDDING"))
-        item_pool.append(self.create_item("KEYITEM_SYRINGE"))
-        item_pool.append(self.create_item("KEYITEM_NOTEBOOK"))
-        item_pool.append(self.create_item("KEYITEM_DOLL"))
-        item_pool.append(self.create_item("KEYITEM_DRAWING"))
-
+        item_pool.append(self.create_item(ItemNames.neps_pudding))
+        item_pool.append(self.create_item(ItemNames.compas_syringe))
+        item_pool.append(self.create_item(ItemNames.ifs_notebook))
+        item_pool.append(self.create_item(ItemNames.plutia_doll))
+        item_pool.append(self.create_item(ItemNames.peashys_drawing))
         for DungeonName in dungeonItemList.keys():
             item_pool.append(self.create_item(DungeonName))
-##...
-##item_pool length == total number of locations   
-##...
-##...
+        for CharacterName in characterItemList.keys():
+            item_pool.append(self.create_item(CharacterName))
+        for i in range(0,6):
+            item_pool.append(self.create_item(progressiveGear.neptune_progressive_gear))
+        for i in range(0,6):
+            item_pool.append(self.create_item(progressiveGear.noire_progressive_gear))
+        for i in range(0,6):
+            item_pool.append(self.create_item(progressiveGear.plutia_progressive_gear))
+        for i in range(0,5):
+            item_pool.append(self.create_item(progressiveGear.blanc_progressive_gear))
+        for i in range(0,5):
+            item_pool.append(self.create_item(progressiveGear.vert_progressive_gear))
+        for i in range(0,5):
+            item_pool.append(self.create_item(progressiveGear.nepgear_progressive_gear))
+        for i in range(0,5):
+            item_pool.append(self.create_item(progressiveGear.peashy_progressive_gear))
+        for i in range(0,3):
+            item_pool.append(self.create_item(progressiveGear.uni_progressive_gear))
+        for i in range(0,4):
+            item_pool.append(self.create_item(progressiveGear.rom_progressive_gear))
+        for i in range(0,4):
+            item_pool.append(self.create_item(progressiveGear.ram_progressive_gear))
+        for i in range(0,6):
+            item_pool.append(self.create_item(progressiveGear.progressive_armor))
+
         numbersOfItemsInTheGame = len(self.multiworld.get_unfilled_locations(self.player))
         while numbersOfItemsInTheGame > len(item_pool):
             if self.random.randrange(0,100) > 55:
@@ -80,7 +105,6 @@ class NepRb3World(World):
         return
 
     def set_rules(self) -> None:
-        set_location_rules(self)
         self.multiworld.completion_condition[self.player] = lambda state: state.can_reach_region("City Center",self.player)
         return
 
