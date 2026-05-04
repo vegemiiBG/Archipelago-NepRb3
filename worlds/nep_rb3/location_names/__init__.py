@@ -15,7 +15,6 @@ from .duo_r_ruins import *
 from .em_es_magma_cave import *
 from .em_es_magma_cave_depths import *
 from .extradimensional_space import *
-from .game_dimension import *
 from .gigo_depths import *
 from .gigo_main_entrance import *
 from .graphic_pass import *
@@ -208,4 +207,8 @@ treasures: typing.List[LocationData] = (
     ZecaRuinsNo1Treasures,
     ZecaRuinsNo2Treasures,
     ZegaForestTreasures,
+)
+
+goalLocation: typing.List[LocationData] = (
+    CityCenterGoal,
 )

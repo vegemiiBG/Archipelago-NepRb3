@@ -1,5 +1,6 @@
 
 # Items
+VICTORY                            = "Victory"
 healing_grass                      = "Healing Grass"
 healing_pod                        = "Healing Pod"
 healing_drink                      = "Healing Drink"
@@ -2260,7 +2261,7 @@ dungeon_unlock_1                   = "Dungeon Unlock - Virtua Forest Safe Zone"
 dungeon_unlock_2                   = "Dungeon Unlock - Station Area"
 dungeon_unlock_3                   = "Dungeon Unlock - Zeca Ruins No.1"
 dungeon_unlock_4                   = "Dungeon Unlock - Jet Set Range"
-#dungeon_unlock_5                  = "Dungeon Unlock - Jet Set Range"
+dungeon_unlock_5                  = "Dungeon Unlock - Jet Set Range"
 dungeon_unlock_6                   = "Dungeon Unlock - Wanderer's Cave"
 #dungeon_unlock_7                  = "Dungeon Unlock - Wanderer's Cave Depths"
 dungeon_unlock_8                   = "Dungeon Unlock - Bandicrash"

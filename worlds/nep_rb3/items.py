@@ -18,6 +18,7 @@ class NepRb3ItemData(NamedTuple):
 item_data: dict[str, NepRb3ItemData] = {
     # fmt: off
     #"INDEX_NOTHING":                                          NepRb3ItemData(0,ItemClassification.useful),
+    ItemNames.VICTORY:                                   NepRb3ItemData(999999,ItemClassification.progression),
     ItemNames.healing_grass:                             NepRb3ItemData(1,ItemClassification.useful),
     ItemNames.healing_pod:                               NepRb3ItemData(2,ItemClassification.useful),
     ItemNames.healing_drink:                             NepRb3ItemData(3,ItemClassification.useful),

@@ -28,7 +28,7 @@ from .options import NepRb3Options
 from .locations import all_locations, gathers, location_table
 from .names import ItemNames,progressiveGear
 from .Regions import Nep3RegionDef
-from .Rules import set_all_planeptune_dungeons, set_all_lastation_dungeons, set_all_lowee_dungeons, set_all_leanbox_dungeons,set_all_hyper_dungeons, checkDungeonRequirements
+from .Rules import set_all_planeptune_dungeons, set_all_lastation_dungeons, set_all_lowee_dungeons, set_all_leanbox_dungeons,set_all_hyper_dungeons, checkDungeonRequirements, set_win_condition
 
 class NepRb3World(World):
     """Nep."""
@@ -57,6 +57,7 @@ class NepRb3World(World):
         set_all_lowee_dungeons(self)
         set_all_leanbox_dungeons(self)
         set_all_hyper_dungeons(self)
+        set_win_condition(self)
 
 
     def create_items(self) -> None:
@@ -104,8 +105,9 @@ class NepRb3World(World):
     def get_filler_item_name(self) -> str:
         return
 
+
     def set_rules(self) -> None:
-        self.multiworld.completion_condition[self.player] = lambda state: state.can_reach_region("City Center",self.player)
+        
         return
 
     def fill_slot_data(self) -> dict:

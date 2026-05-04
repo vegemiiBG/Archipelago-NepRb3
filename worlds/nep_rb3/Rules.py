@@ -6,7 +6,10 @@ from rule_builder.options import OptionFilter
 from rule_builder.rules import Has, HasAll, Rule
 from .names import DungeonNames, CharacterNames, progressiveGear, DungeonIDs, ItemNames
 from BaseClasses import CollectionState
-from .items import apDungeonItemBaseID, item_id_to_name, NepRb3ItemData
+from .items import apDungeonItemBaseID, item_id_to_name, NepRb3Item, item_data
+from .names import ItemNames
+from .locations import NepRb3Location
+from BaseClasses import ItemClassification
 if TYPE_CHECKING:
     from . import NepRb3World
 
@@ -139,7 +142,7 @@ def checkDungeonRequirements (Difficulty: int, state:CollectionState, player:int
 
 
 def set_all_planeptune_dungeons(world: "NepRb3World") -> None:
-    planeptune_to_lastation = world.get_entrance(DungeonNames.jet_set_range)
+    #planeptune_to_lastation = world.get_entrance(DungeonNames.jet_set_range)
     planeptune_otori_forest = world.get_entrance(DungeonNames.otori_forest)
     planeptune_zeca_ruins1 = world.get_entrance(DungeonNames.zeca_ruins_no1)
     planeptune_zeca_ruins2 = world.get_entrance(DungeonNames.zeca_ruins_no2)
@@ -147,13 +150,13 @@ def set_all_planeptune_dungeons(world: "NepRb3World") -> None:
     #planeptune_haneda_mountain_peak = world.get_entrance(DungeonNames.haneda_mountain_peak)
     planeptune_otori_cave = world.get_entrance(DungeonNames.otori_cave)
     planeptune_powerlevel_island = world.get_entrance(DungeonNames.powerlevel_island)
-    planeptune_powerlevel_island_interior = world.get_entrance(DungeonNames.powerlevel_island_interior)
+    #planeptune_powerlevel_island_interior = world.get_entrance(DungeonNames.powerlevel_island_interior)
     planeptune_digital_future_land = world.get_entrance(DungeonNames.digital_future_land)
-    planeptune_digital_future_depths = world.get_entrance(DungeonNames.digital_future_depths)
+    #planeptune_digital_future_depths = world.get_entrance(DungeonNames.digital_future_depths)
 
     world.set_rule(planeptune_otori_forest, lambda state: checkDungeonRequirements(1, state, world.player)                   and hasDungeonUnlocked(state,world.player,DungeonNames.otori_forest))
     world.set_rule(planeptune_zeca_ruins1, lambda state: checkDungeonRequirements(1, state, world.player)                    and hasDungeonUnlocked(state,world.player,DungeonNames.zeca_ruins_no1))
-    world.set_rule(planeptune_to_lastation, lambda state:checkDungeonRequirements(250,state,world.player)                    and hasDungeonUnlocked(state,world.player,DungeonNames.jet_set_range))
+    #world.set_rule(planeptune_to_lastation, lambda state:checkDungeonRequirements(250,state,world.player)                    and hasDungeonUnlocked(state,world.player,DungeonNames.jet_set_range))
     world.set_rule(planeptune_zeca_ruins2, lambda state: checkDungeonRequirements(500, state, world.player)                  and hasDungeonUnlocked(state,world.player,DungeonNames.zeca_ruins_no2))
     world.set_rule(planeptune_haneda_mountain_range, lambda state: checkDungeonRequirements(1350, state, world.player)       and hasDungeonUnlocked(state,world.player,DungeonNames.haneda_mountain_range))
     #world.set_rule(planeptune_haneda_mountain_peak, lambda state: checkDungeonRequirements(1050, state, world.player)        and hasDungeonUnlocked(state,world.player,DungeonNames.haneda_mountain_range))
@@ -164,23 +167,23 @@ def set_all_planeptune_dungeons(world: "NepRb3World") -> None:
     #world.set_rule(planeptune_digital_future_depths,lambda state:checkDungeonRequirements(2500,state,world.player)          and hasDungeonUnlocked(state,world.player,DungeonNames.digital_future_depths))
 ##
 def set_all_lastation_dungeons(world: "NepRb3World") -> None:
-    #lastation_to_planeptune = world.get_entrance(DungeonNames.jet_set_peak)
-    lastation_to_lowee = world.get_entrance(DungeonNames.rud_arms_sewer_n)
+    lastation_to_planeptune = world.get_entrance(DungeonNames.jet_set_peak)
+    #lastation_to_lowee = world.get_entrance(DungeonNames.rud_arms_sewer_n)
     lastation_vida_dimension = world.get_entrance(DungeonNames.vida_dimension)
     lastation_gigo = world.get_entrance(DungeonNames.gigo_main_entrance)
-    lastation_gigo_depths = world.get_entrance(DungeonNames.gigo_depths)
+    #lastation_gigo_depths = world.get_entrance(DungeonNames.gigo_depths)
     lastation_anonydeath_lab = world.get_entrance(DungeonNames.anonydeaths_lab)
-    lastation_anonydeath_depths = world.get_entrance(DungeonNames.anonydeaths_lab_depths)
+    #lastation_anonydeath_depths = world.get_entrance(DungeonNames.anonydeaths_lab_depths)
     lastation_soni_wetlands = world.get_entrance(DungeonNames.soni_wetlands)
     lastation_wanderers_cave = world.get_entrance(DungeonNames.wanderers_cave)
-    lastation_wanderers_depths = world.get_entrance(DungeonNames.wanderers_cave_depths)
+    #lastation_wanderers_depths = world.get_entrance(DungeonNames.wanderers_cave_depths)
     lastation_kuzarat = world.get_entrance(DungeonNames.kuzarat_facility_1)
-    lastation_kuzarat_inner = world.get_entrance(DungeonNames.kuzarat_facility_2)
+   # lastation_kuzarat_inner = world.get_entrance(DungeonNames.kuzarat_facility_2)
     lastation_bandicrash = world.get_entrance(DungeonNames.bandicrash)
     lastation_national_factory = world.get_entrance(DungeonNames.national_factory)
     lastation_ps_dimension = world.get_entrance(DungeonNames.ps_dimension)
 
-    #world.set_rule(lastation_to_planeptune, lambda state: checkDungeonRequirements(150, state, world.player)                and hasDungeonUnlocked(state,world.player,DungeonNames.jet_set_peak))
+    world.set_rule(lastation_to_planeptune, lambda state: checkDungeonRequirements(150, state, world.player)                and hasDungeonUnlocked(state,world.player,DungeonNames.jet_set_peak))
     #world.set_rule(lastation_to_lowee, lambda state: checkDungeonRequirements(250, state, world.player)                     and hasDungeonUnlocked(state,world.player,DungeonNames.rud_arms_sewer_n))
     world.set_rule(lastation_vida_dimension, lambda state: checkDungeonRequirements(2050, state, world.player)             and hasDungeonUnlocked(state,world.player,DungeonNames.vida_dimension))
     world.set_rule(lastation_gigo, lambda state: checkDungeonRequirements(900, state, world.player)                        and hasDungeonUnlocked(state,world.player,DungeonNames.gigo_main_entrance))
@@ -195,21 +198,22 @@ def set_all_lastation_dungeons(world: "NepRb3World") -> None:
     world.set_rule(lastation_bandicrash, lambda state: checkDungeonRequirements(750, state, world.player)                  and hasDungeonUnlocked(state,world.player,DungeonNames.bandicrash))
     world.set_rule(lastation_national_factory, lambda state: checkDungeonRequirements(1000, state, world.player)           and hasDungeonUnlocked(state,world.player,DungeonNames.national_factory))
     world.set_rule(lastation_ps_dimension, lambda state: checkDungeonRequirements(1300, state, world.player)               and hasDungeonUnlocked(state,world.player,DungeonNames.ps_dimension))
+    
                    
 ##
 def set_all_lowee_dungeons(world: "NepRb3World") -> None:
     lowee_to_lastation = world.get_entrance(DungeonNames.rud_arms_sewer_s)
     lowee_ario_plateau = world.get_entrance(DungeonNames.ario_plateau)
-    lowee_castle_chambers = world.get_entrance(DungeonNames.castle_chambers)
+    #lowee_castle_chambers = world.get_entrance(DungeonNames.castle_chambers)
     lowee_castle_exterior = world.get_entrance(DungeonNames.lowee_castle_exterior)
-    lowee_castle_interior = world.get_entrance(DungeonNames.lowee_castle_interior)
+    #lowee_castle_interior = world.get_entrance(DungeonNames.lowee_castle_interior)
     lowee_castle_northern_space = world.get_entrance(DungeonNames.lowee_castle_northern_space)
-    lowee_castle_southern_space = world.get_entrance(DungeonNames.lowee_castle_southern_space)
+    #lowee_castle_southern_space = world.get_entrance(DungeonNames.lowee_castle_southern_space)
     lowee_luji_plateau = world.get_entrance(DungeonNames.luji_plateau)
     lowee_metroid_shelter = world.get_entrance(DungeonNames.metroid_shelter)
-    lowee_metroid_shelter_depths = world.get_entrance(DungeonNames.metroid_shelter_depths)
+    #lowee_metroid_shelter_depths = world.get_entrance(DungeonNames.metroid_shelter_depths)
     lowee_reload_grasslands = world.get_entrance(DungeonNames.reload_grasslands)
-    lowee_underground_cave = world.get_entrance(DungeonNames.underground_cave)
+    #lowee_underground_cave = world.get_entrance(DungeonNames.underground_cave)
     lowee_mines = world.get_entrance(DungeonNames.mines)
 
     world.set_rule(lowee_to_lastation, lambda state: checkDungeonRequirements(650, state, world.player)             and hasDungeonUnlocked(state,world.player,DungeonNames.rud_arms_sewer_s))
@@ -231,7 +235,7 @@ def set_all_leanbox_dungeons(world: "NepRb3World") -> None:
     leanbox_halo_forest = world.get_entrance(DungeonNames.halo_forest)
     leanbox_zega_forest = world.get_entrance(DungeonNames.zega_forest)
     leanbox_emes_magma_cave = world.get_entrance(DungeonNames.em_es_magma_cave)
-    leanbox_emes_magma_depths = world.get_entrance(DungeonNames.em_es_magma_cave_depths)
+    #leanbox_emes_magma_depths = world.get_entrance(DungeonNames.em_es_magma_cave_depths)
     leanbox_kobaba_ruins = world.get_entrance(DungeonNames.kobaba_ruins)
     leanbox_nekutoki_forest = world.get_entrance(DungeonNames.nekutoki_forest)
 
@@ -241,7 +245,7 @@ def set_all_leanbox_dungeons(world: "NepRb3World") -> None:
     #world.set_rule(leanbox_emes_magma_depths, lambda state: checkDungeonRequirements(1500, state, world.player)     and hasDungeonUnlocked(state,world.player,DungeonNames.em_es_magma_cave_depths))
     world.set_rule(leanbox_kobaba_ruins, lambda state: checkDungeonRequirements(2145, state, world.player)           and hasDungeonUnlocked(state,world.player,DungeonNames.kobaba_ruins))
     world.set_rule(leanbox_nekutoki_forest, lambda state: checkDungeonRequirements(2150, state, world.player)        and hasDungeonUnlocked(state,world.player,DungeonNames.nekutoki_forest))
-
+    
 ##
 def set_all_pc_dungeons(world: "NepRb3World") -> None:
     pc_adaldik_forest = world.get_entrance(DungeonNames.adaldik_forest)
@@ -255,7 +259,7 @@ def set_all_pc_dungeons(world: "NepRb3World") -> None:
 ##
 def set_all_hello_dungeons(world: "NepRb3World") -> None:
     hello_suaho_mountain_range = world.get_entrance(DungeonNames.suaho_mountain_range)
-    hello_suaho_mountain_peak = world.get_entrance(DungeonNames.suaho_mountain_peak)
+    #hello_suaho_mountain_peak = world.get_entrance(DungeonNames.suaho_mountain_peak)
     hello_so_shal_forest = world.get_entrance(DungeonNames.so_shal_forest)
     hello_keraga_dimension = world.get_entrance(DungeonNames.keraga_dimension)
 
@@ -267,15 +271,15 @@ def set_all_hello_dungeons(world: "NepRb3World") -> None:
 ##
 def set_all_hyper_dungeons(world: "NepRb3World") -> None:
     hyper_city = world.get_entrance(DungeonNames.city_center)
-    hyper_game_dimension = world.get_entrance(DungeonNames.game_dimension)
+    #hyper_game_dimension = world.get_entrance(DungeonNames.game_dimension)
     hyper_virtua_forest_sz = world.get_entrance(DungeonNames.virtua_forest_safe_zone)
     hyper_station_area = world.get_entrance(DungeonNames.station_area)
     hyper_virtua_forest = world.get_entrance(DungeonNames.virtua_forest)
-    hyper_city_virtua_depths = world.get_entrance(DungeonNames.virtua_forest_depths)
+    #hyper_city_virtua_depths = world.get_entrance(DungeonNames.virtua_forest_depths)
     hyper_under_inverse = world.get_entrance(DungeonNames.under_inverse)
-    hyper_under_depths = world.get_entrance(DungeonNames.under_inverse_depths)
+    #hyper_under_depths = world.get_entrance(DungeonNames.under_inverse_depths)
     hyper_planeptune_alley = world.get_entrance(DungeonNames.planeptune_alley)
-    hyper_dlc_treasure_ruins = world.get_entrance(DungeonNames.treasure_ruins)
+    #hyper_dlc_treasure_ruins = world.get_entrance(DungeonNames.treasure_ruins)
 
     world.set_rule(hyper_city, lambda state: checkDungeonRequirements(5080, state, world.player)                    and hasDungeonUnlocked(state,world.player,DungeonNames.city_center))
     #world.set_rule(hyper_game_dimension, lambda state: checkDungeonRequirements(1200, state, world.player)          and hasDungeonUnlocked(state,world.player,DungeonNames.game_dimension))
@@ -289,3 +293,11 @@ def set_all_hyper_dungeons(world: "NepRb3World") -> None:
     #world.set_rule(hyper_dlc_treasure_ruins, lambda state: checkDungeonRequirements(32650, state, world.player)     and hasDungeonUnlocked(state,world.player,DungeonNames.city_center))
 
 ##
+
+def set_win_condition(world: "NepRb3World") -> None:
+    hyper_city = world.get_entrance(DungeonNames.city_center)
+    goalLoc = world.multiworld.get_location("City Center - True Rei Ryghts", world.player)
+    victoryItem = item_data["Victory"]
+    world.multiworld.completion_condition[world.player] = lambda state: state.has("Victory", world.player)
+    world.set_rule(goalLoc, lambda state: checkDungeonRequirements(5080, state, world.player) and hasDungeonUnlocked(state,world.player,DungeonNames.city_center) and state.has(ItemNames.neps_pudding, world.player) and state.has(ItemNames.compas_syringe, world.player) and state.has(ItemNames.ifs_notebook, world.player) and state.has(ItemNames.plutia_doll, world.player) and state.has(ItemNames.peashys_drawing, world.player))
+    world.multiworld.get_location("City Center - True Rei Ryghts", world.player).place_locked_item(NepRb3Item("Victory", ItemClassification.progression, None, world.player))

@@ -16,3 +16,9 @@ LocationData("City Center","Treasure 3", 34_3, "Treasure"),
 LocationData("City Center","Treasure 4", 34_4, "Treasure"),
 LocationData("City Center","Treasure 5", 34_5, "Treasure"),
 )
+
+
+CityCenterGoal: typing.List[LocationData] = (
+LocationData("City Center","True Rei Ryghts",1042,0),
+)
+
