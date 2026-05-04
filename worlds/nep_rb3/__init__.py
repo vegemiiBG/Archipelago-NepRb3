@@ -28,7 +28,7 @@ from .options import NepRb3Options
 from .locations import all_locations, gathers, location_table
 from .names import ItemNames,progressiveGear
 from .Regions import Nep3RegionDef
-from .Rules import set_all_planeptune_dungeons, set_all_lastation_dungeons, set_all_lowee_dungeons, set_all_leanbox_dungeons,set_all_hyper_dungeons, checkDungeonRequirements, set_win_condition
+from .Rules import *
 
 class NepRb3World(World):
     """Nep."""
@@ -57,6 +57,9 @@ class NepRb3World(World):
         set_all_lowee_dungeons(self)
         set_all_leanbox_dungeons(self)
         set_all_hyper_dungeons(self)
+        set_all_hello_dungeons(self)
+        set_all_pc_dungeons(self)
+        set_all_eden_dungeons(self)
         set_win_condition(self)
 
 
@@ -69,8 +72,14 @@ class NepRb3World(World):
         item_pool.append(self.create_item(ItemNames.peashys_drawing))
         for DungeonName in dungeonItemList.keys():
             item_pool.append(self.create_item(DungeonName))
+        # Starting Character
+        starting_character = CharacterNames.neptune
+        self.multiworld.push_precollected(self.create_item(starting_character))
+
         for CharacterName in characterItemList.keys():
+            if starting_character == CharacterName: continue
             item_pool.append(self.create_item(CharacterName))
+            
         for i in range(0,6):
             item_pool.append(self.create_item(progressiveGear.neptune_progressive_gear))
         for i in range(0,6):
