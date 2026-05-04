@@ -19,6 +19,6 @@ LocationData("City Center","Treasure 5", 34_5, "Treasure"),
 
 
 CityCenterGoal: typing.List[LocationData] = (
-LocationData("City Center","True Rei Ryghts",1042,0),
+LocationData("City Center","True Rei Ryghts",None,0),
 )
 
