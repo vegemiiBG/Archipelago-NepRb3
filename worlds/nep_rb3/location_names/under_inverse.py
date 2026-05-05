@@ -2,11 +2,11 @@ import typing
 from ..LocationData import LocationData
 
 UnderInverse: typing.List[LocationData] = (
-LocationData("Under Inverse","Gather 1", 56_1, 0),
-LocationData("Under Inverse","Gather 2", 56_2, 0),
-LocationData("Under Inverse","Gather 3", 56_3, 0),
-LocationData("Under Inverse","Gather 4", 56_4, 0),
-LocationData("Under Inverse","Gather 5", 56_5, 0),
+LocationData("Under Inverse","Gather 1", 56_1, "Gather"),
+LocationData("Under Inverse","Gather 2", 56_2, "Gather"),
+LocationData("Under Inverse","Gather 3", 56_3, "Gather"),
+LocationData("Under Inverse","Gather 4", 56_4, "Gather"),
+LocationData("Under Inverse","Gather 5", 56_5, "Gather"),
 )
 
 UnderInverseTreasures: typing.List[LocationData] = (

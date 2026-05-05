@@ -2,12 +2,12 @@ import typing
 from ..LocationData import LocationData
 
 DoTemple: typing.List[LocationData] = (
-LocationData("Do Temple","Gather 1", 65_1, 0),
-LocationData("Do Temple","Gather 2", 65_2, 0),
-LocationData("Do Temple","Gather 3", 65_3, 0),
-LocationData("Do Temple","Gather 4", 65_4, 0),
-LocationData("Do Temple","Gather 5", 65_5, 0),
-LocationData("Do Temple","Gather 6", 65_6, 0),
+LocationData("Do Temple","Gather 1", 65_1, "Gather"),
+LocationData("Do Temple","Gather 2", 65_2, "Gather"),
+LocationData("Do Temple","Gather 3", 65_3, "Gather"),
+LocationData("Do Temple","Gather 4", 65_4, "Gather"),
+LocationData("Do Temple","Gather 5", 65_5, "Gather"),
+LocationData("Do Temple","Gather 6", 65_6, "Gather"),
 )
 
 DoTempleTreasures: typing.List[LocationData] = (

@@ -2,14 +2,14 @@ import typing
 from ..LocationData import LocationData
 
 OtoriCave: typing.List[LocationData] = (
-LocationData("Otori Cave","Gather 1", 28_1, 0),
-LocationData("Otori Cave","Gather 2", 28_2, 0),
-LocationData("Otori Cave","Gather 3", 28_3, 0),
-LocationData("Otori Cave","Gather 4", 28_4, 0),
-LocationData("Otori Cave","Gather 5", 28_5, 0),
-LocationData("Otori Cave","Gather 6", 28_6, 0),
-LocationData("Otori Cave","Gather 7", 28_7, 0),
-LocationData("Otori Cave","Gather 8", 28_8, 0),
+LocationData("Otori Cave","Gather 1", 28_1, "Gather"),
+LocationData("Otori Cave","Gather 2", 28_2, "Gather"),
+LocationData("Otori Cave","Gather 3", 28_3, "Gather"),
+LocationData("Otori Cave","Gather 4", 28_4, "Gather"),
+LocationData("Otori Cave","Gather 5", 28_5, "Gather"),
+LocationData("Otori Cave","Gather 6", 28_6, "Gather"),
+LocationData("Otori Cave","Gather 7", 28_7, "Gather"),
+LocationData("Otori Cave","Gather 8", 28_8, "Gather"),
 )
 
 OtoriCaveTreasures: typing.List[LocationData] = (

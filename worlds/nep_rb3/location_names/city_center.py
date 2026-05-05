@@ -2,11 +2,11 @@ import typing
 from ..LocationData import LocationData
 
 CityCenter: typing.List[LocationData] = (
-LocationData("City Center","Gather 1", 34_1, 0),
-LocationData("City Center","Gather 2", 34_2, 0),
-LocationData("City Center","Gather 3", 34_3, 0),
-LocationData("City Center","Gather 4", 34_4, 0),
-LocationData("City Center","Gather 5", 34_5, 0),
+LocationData("City Center","Gather 1", 34_1, "Gather"),
+LocationData("City Center","Gather 2", 34_2, "Gather"),
+LocationData("City Center","Gather 3", 34_3, "Gather"),
+LocationData("City Center","Gather 4", 34_4, "Gather"),
+LocationData("City Center","Gather 5", 34_5, "Gather"),
 )
 
 CityCenterTreasures: typing.List[LocationData] = (
@@ -25,6 +25,10 @@ LocationData("City Center","Viral High Lizard ", 282, "Enemy"),
 LocationData("City Center","Crescent Dragon", 405, "Big Enemy"),
 )
 
+CityCenterLevels: typing.list[LocationData] = (
+LocationData("City Center","Level 70", None,0),
+
+)
 
 CityCenterGoal: typing.List[LocationData] = (
 LocationData("City Center","True Rei Ryghts",None,0),

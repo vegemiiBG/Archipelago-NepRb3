@@ -2,11 +2,11 @@ import typing
 from ..LocationData import LocationData
 
 MagmaCaveDepths: typing.List[LocationData] = (
-LocationData("Magma Cave Depths","Gather 1", 32_1, 0),
-LocationData("Magma Cave Depths","Gather 2", 32_2, 0),
-LocationData("Magma Cave Depths","Gather 3", 32_3, 0),
-LocationData("Magma Cave Depths","Gather 4", 32_4, 0),
-LocationData("Magma Cave Depths","Gather 5", 32_5, 0),
+LocationData("Magma Cave Depths","Gather 1", 32_1, "Gather"),
+LocationData("Magma Cave Depths","Gather 2", 32_2, "Gather"),
+LocationData("Magma Cave Depths","Gather 3", 32_3, "Gather"),
+LocationData("Magma Cave Depths","Gather 4", 32_4, "Gather"),
+LocationData("Magma Cave Depths","Gather 5", 32_5, "Gather"),
 )
 
 MagmaCaveDepthsTreasures: typing.List[LocationData] = (

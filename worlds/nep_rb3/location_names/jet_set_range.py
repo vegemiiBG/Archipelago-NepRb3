@@ -2,11 +2,11 @@ import typing
 from ..LocationData import LocationData
 
 JetSetRange: typing.List[LocationData] = (
-LocationData("Jet Set Range","Gather 1", 4_1, 0),
-LocationData("Jet Set Range","Gather 2", 4_2, 0),
-LocationData("Jet Set Range","Gather 3", 4_3, 0),
-LocationData("Jet Set Range","Gather 4", 4_4, 0),
-LocationData("Jet Set Range","Gather 5", 4_5, 0),
+LocationData("Jet Set Range","Gather 1", 4_1, "Gather"),
+LocationData("Jet Set Range","Gather 2", 4_2, "Gather"),
+LocationData("Jet Set Range","Gather 3", 4_3, "Gather"),
+LocationData("Jet Set Range","Gather 4", 4_4, "Gather"),
+LocationData("Jet Set Range","Gather 5", 4_5, "Gather"),
 )
 JetSetRangeTreasures: typing.List[LocationData] = (
 LocationData("Jet Set Range","Treasure 1", 4_1, "Treasure"),
