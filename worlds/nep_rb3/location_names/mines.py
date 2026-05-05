@@ -19,3 +19,11 @@ LocationData("Mines","Treasure 3", 21_3, "Treasure"),
 LocationData("Mines","Treasure 4", 21_4, "Treasure"),
 LocationData("Mines","Treasure 5", 21_5, "Treasure"),
 )
+MinesEnemies: typing.List[LocationData] = (
+LocationData("Mines","Frozen Skull", 133, "Enemy"),
+LocationData("Mines","Ruffian Cat", 288, "Enemy"),
+LocationData("Mines","Cold Lizard", 268, "Enemy"),
+LocationData("Mines","Viral Cold Lizard", 278, "Enemy"),
+LocationData("Mines","Old Man Deus", 241, "Enemy"),
+LocationData("Mines","Ice Fenrir", 428, "Big Enemy"),
+)

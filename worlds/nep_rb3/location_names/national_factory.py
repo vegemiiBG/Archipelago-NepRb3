@@ -15,3 +15,10 @@ LocationData("National Factory","Treasure 2", 20_2, "Treasure"),
 LocationData("National Factory","Treasure 3", 20_3, "Treasure"),
 LocationData("National Factory","Treasure 4", 20_4, "Treasure"),
 )
+NationalFactoryEnemies: typing.List[LocationData] = (
+#LocationData("National Factory","High Bit Custom ", 153, "Enemy"), Duplicate Enemy
+LocationData("National Factory","Inky", 209, "Enemy"),
+LocationData("National Factory","Ms. Inky", 220, "Enemy"),
+LocationData("National Factory","DSTT", 141, "Enemy"),
+LocationData("National Factory","Heavy Tank", 421, "Big Enemy"),
+)

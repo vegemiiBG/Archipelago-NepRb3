@@ -19,3 +19,11 @@ LocationData("Wanderer's Cave Depths","Treasure 3", 7_3, "Treasure"),
 LocationData("Wanderer's Cave Depths","Treasure 4", 7_4, "Treasure"),
 )
 
+WanderersCaveDepthsEnemies: typing.List[LocationData] = (
+LocationData("Wanderer's Cave Depths","Ice Boy", 206, "Enemy"),
+LocationData("Wanderer's Cave Depths","Ice Girl", 217, "Enemy"),
+LocationData("Wanderer's Cave Depths","Delinquent Cat", 287, "Enemy"),
+LocationData("Wanderer's Cave Depths","Crystal Golem", 156, "Enemy"),
+LocationData("Wanderer's Cave Depths","Viral Crystal Golem", 164, "Enemy"),
+LocationData("Wanderer's Cave Depths","Dolphin", 407, "Big Enemy"),
+)

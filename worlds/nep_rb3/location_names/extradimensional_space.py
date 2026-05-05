@@ -16,3 +16,11 @@ LocationData("Extradimensional Space","Treasure 3", 33_3, "Treasure"),
 LocationData("Extradimensional Space","Treasure 4", 33_4, "Treasure"),
 LocationData("Extradimensional Space","Treasure 5", 33_5, "Treasure"),
 )
+ExtradimensionalSpaceEnemies: typing.List[LocationData] = (
+LocationData("Extradimensional Space","Spotted Plum-met", 321, "Enemy"),
+LocationData("Extradimensional Space","Terist", 325, "Enemy"),
+LocationData("Extradimensional Space","Speckle", 333, "Enemy"),
+LocationData("Extradimensional Space","Viral Speckle", 336, "Enemy"),
+LocationData("Extradimensional Space","Tera Hunk", 308, "Enemy"),
+LocationData("Extradimensional Space","Cerberus", 431, "Big Enemy"),
+)

@@ -17,3 +17,12 @@ LocationData("Under Inverse Depths","Treasure 2", 57_2, "Treasure"),
 LocationData("Under Inverse Depths","Treasure 3", 57_3, "Treasure"),
 LocationData("Under Inverse Depths","Treasure 4", 57_4, "Treasure"),
 )
+UnderInverseDepthsEnemies: typing.List[LocationData] = (
+LocationData("Under Inverse Depths","Nanovader", 153, "Enemy"),
+LocationData("Under Inverse Depths","Earth Golem", 158, "Enemy"),
+LocationData("Under Inverse Depths","Viral Earth Golem", 166, "Enemy"),
+LocationData("Under Inverse Depths","Aluna", 245, "Enemy"),
+LocationData("Under Inverse Depths","Viral Aluna", 252, "Enemy"),
+LocationData("Under Inverse Depths","Strange Person", 240, "Enemy"),
+LocationData("Under Inverse Depths","Self-Defense System ", 420, "Big Enemy"),
+)

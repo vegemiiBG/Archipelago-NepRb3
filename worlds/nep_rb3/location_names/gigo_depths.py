@@ -16,3 +16,11 @@ LocationData("Gigo Depths","Treasure 3", 18_3, "Treasure"),
 LocationData("Gigo Depths","Treasure 4", 18_4, "Treasure"),
 LocationData("Gigo Depths","Treasure 5", 18_5, "Treasure"),
 )
+GigoDepthsEnemies: typing.List[LocationData] = (
+LocationData("Gigo Depths","Malvader", 154, "Enemy"),
+#LocationData("Gigo Depths","SHDC", 327, "Enemy"), Cant find enemy
+#LocationData("Gigo Depths","Swallowtail", 331, "Enemy"), Same enemies as area 1, only Malvader is a new enemy
+#LocationData("Gigo Depths","Viral Swallowtail ", 335, "Enemy"),
+#LocationData("Gigo Depths","Horsebird", 329, "Enemy"),
+#LocationData("Gigo Depths","King Crab ", 436, "Big Enemy"),
+)

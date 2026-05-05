@@ -16,3 +16,10 @@ LocationData("Lowee Castle Northern Space","Treasure 3", 44_3, "Treasure"),
 LocationData("Lowee Castle Northern Space","Treasure 4", 44_4, "Treasure"),
 LocationData("Lowee Castle Northern Space","Treasure 5", 44_5, "Treasure"),
 )
+LoweeCastleNorthernSpaceEnemies: typing.List[LocationData] = (
+LocationData("Lowee Castle Northern Space","Support Bit", 130, "Enemy"),
+LocationData("Lowee Castle Northern Space","Lowee Elite Guard", 296, "Enemy"),
+LocationData("Lowee Castle Northern Space","Magical Dogoo", 111, "Enemy"),
+LocationData("Lowee Castle Northern Space","Lowee Magical Soldier", 297, "Enemy"),
+LocationData("Lowee Castle Northern Space","Hyakushiki Weapon", 425, "Big Enemy"),
+)

@@ -16,3 +16,12 @@ LocationData("So Shal Forest","Treasure 3", 62_3, "Treasure"),
 LocationData("So Shal Forest","Treasure 4", 62_4, "Treasure"),
 LocationData("So Shal Forest","Treasure 5", 62_5, "Treasure"),
 )
+SoShalForestEnemies: typing.List[LocationData] = (
+LocationData("So Shal Forest","Nanovader", 153, "Enemy"),
+LocationData("So Shal Forest","Earth Golem", 158, "Enemy"),
+LocationData("So Shal Forest","Viral Earth Golem", 166, "Enemy"),
+LocationData("So Shal Forest","Aluna", 245, "Enemy"),
+LocationData("So Shal Forest","Viral Aluna", 252, "Enemy"),
+LocationData("So Shal Forest","Strange Person", 240, "Enemy"),
+LocationData("So Shal Forest","Self-Defense System ", 420, "Big Enemy"),
+)

@@ -16,3 +16,12 @@ LocationData("Suaho Mountain Peak","Treasure 3", 60_3, "Treasure"),
 LocationData("Suaho Mountain Peak","Treasure 4", 60_4, "Treasure"),
 LocationData("Suaho Mountain Peak","Treasure 5", 60_5, "Treasure"),
 )
+SuahoMountainPeakEnemies: typing.List[LocationData] = (
+LocationData("Suaho Mountain Peak","Nanovader", 153, "Enemy"),
+LocationData("Suaho Mountain Peak","Earth Golem", 158, "Enemy"),
+LocationData("Suaho Mountain Peak","Viral Earth Golem", 166, "Enemy"),
+LocationData("Suaho Mountain Peak","Aluna", 245, "Enemy"),
+LocationData("Suaho Mountain Peak","Viral Aluna", 252, "Enemy"),
+LocationData("Suaho Mountain Peak","Strange Person", 240, "Enemy"),
+LocationData("Suaho Mountain Peak","Self-Defense System ", 420, "Big Enemy"),
+)

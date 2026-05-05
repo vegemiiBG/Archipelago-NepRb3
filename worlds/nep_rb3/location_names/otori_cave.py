@@ -19,3 +19,15 @@ LocationData("Otori Cave","Treasure 3", 28_3, "Treasure"),
 LocationData("Otori Cave","Treasure 4", 28_4, "Treasure"),
 LocationData("Otori Cave","Treasure 5", 28_5, "Treasure"),
 )
+OtoriCaveEnemies: typing.List[LocationData] = (
+LocationData("Otori Cave","Aimable", 200, "Enemy"),
+#LocationData("Otori Cave","Earth Lizard ", 158, "Enemy"),         Someone else find these ID's I cant.
+#LocationData("Otori Cave","Viral Earth Lizard ", 166, "Enemy"),
+LocationData("Otori Cave","Numb Dogoo", 108, "Enemy"),
+#LocationData("Otori Cave","Missile Golem ", 252, "Enemy"),           These guys appear elsewhere
+#LocationData("Otori Cave","Viral Missile Golem ", 240, "Enemy"),
+LocationData("Otori Cave","Thunderbird", 416, "Big Enemy"),
+
+
+
+)

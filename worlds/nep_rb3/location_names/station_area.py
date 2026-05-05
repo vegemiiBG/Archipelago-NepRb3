@@ -16,3 +16,10 @@ LocationData("Station Area","Treasure 2", 2_2, "Treasure"),
 LocationData("Station Area","Treasure 3", 2_3, "Treasure"),
 LocationData("Station Area","Treasure 4", 2_4, "Treasure"),
 )
+
+StationAreaEnemies: typing.List[LocationData] = (
+LocationData("Station Area","Bit", 123, "Enemy"),
+#LocationData("Station Area","Dogoo", 101, "Enemy"),
+LocationData("Station Area","Deus Man", 239, "Enemy"),
+LocationData("Station Area","M-3", 138, "Enemy"),
+)

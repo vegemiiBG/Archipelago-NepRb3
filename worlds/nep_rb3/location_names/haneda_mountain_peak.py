@@ -16,3 +16,12 @@ LocationData("Haneda Mountain Peak","Treasure 3", 24_3, "Treasure"),
 LocationData("Haneda Mountain Peak","Treasure 4", 24_4, "Treasure"),
 LocationData("Haneda Mountain Peak","Treasure 5", 24_5, "Treasure"),
 )
+HanedaMountainPeakEnemies: typing.List[LocationData] = (
+LocationData("Haneda Mountain Peak","Meow", 193, "Enemy"),
+#LocationData("Haneda Mountain Peak","High Heal Dogoo", 158, "Enemy"),  \\ Commented Enemies are the same as Mountain Range enemies
+#LocationData("Haneda Mountain Peak","Wild Dog", 166, "Enemy"),
+#LocationData("Haneda Mountain Peak","Viral Wild Dog", 245, "Enemy"),
+LocationData("Haneda Mountain Peak","Dragon Warrior", 269, "Enemy"),
+LocationData("Haneda Mountain Peak","Viral Dragon Warrior", 279, "Enemy"),
+#LocationData("Haneda Mountain Peak","Fenrir Wolf", 420, "Big Enemy"),
+)

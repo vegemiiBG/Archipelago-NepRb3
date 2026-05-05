@@ -15,3 +15,10 @@ LocationData("Digital Future Depths","Treasure 2", 68_2, "Treasure"),
 LocationData("Digital Future Depths","Treasure 3", 68_3, "Treasure"),
 LocationData("Digital Future Depths","Treasure 4", 68_4, "Treasure"),
 )
+#DigitalFutureDepthsEnemies: typing.List[LocationData] = (                     \\ Same Exact Enemies as Depths
+#LocationData("Digital Future Depths","Shampuru Loner", 153, "Enemy"),
+#LocationData("Digital Future Depths","Dokidoki Sister", 158, "Enemy"),
+#LocationData("Digital Future Depths","NP-02v", 166, "Enemy"),
+#LocationData("Digital Future Depths","Bug Butterfly", 245, "Enemy"),
+#LocationData("Digital Future Depths","Wolf Blaze", 420, "Big Enemy"),
+#)

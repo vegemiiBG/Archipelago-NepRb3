@@ -17,3 +17,12 @@ LocationData("PS Dimension","Treasure 4", 40_4, "Treasure"),
 LocationData("PS Dimension","Treasure 5", 40_5, "Treasure"),
 LocationData("PS Dimension","Treasure 6", 40_6, "Treasure"),
 )
+PSDimensionEnemies: typing.List[LocationData] = (
+LocationData("PS Dimension","Nanovader", 153, "Enemy"),
+LocationData("PS Dimension","Earth Golem", 158, "Enemy"),
+LocationData("PS Dimension","Viral Earth Golem", 166, "Enemy"),
+LocationData("PS Dimension","Aluna", 245, "Enemy"),
+LocationData("PS Dimension","Viral Aluna", 252, "Enemy"),
+LocationData("PS Dimension","Strange Person", 240, "Enemy"),
+LocationData("PS Dimension","Self-Defense System ", 420, "Big Enemy"),
+)

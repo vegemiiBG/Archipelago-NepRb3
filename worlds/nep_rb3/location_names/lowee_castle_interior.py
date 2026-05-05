@@ -16,3 +16,11 @@ LocationData("Lowee Castle Interior","Treasure 3", 14_3, "Treasure"),
 LocationData("Lowee Castle Interior","Treasure 4", 14_4, "Treasure"),
 LocationData("Lowee Castle Interior","Treasure 5", 14_5, "Treasure"),
 )
+#LoweeCastleInteriorEnemies: typing.List[LocationData] = (                  All of these Enemies appear elsewhere
+#LocationData("Lowee Castle Interior","Child Wolf", 153, "Enemy"),
+#LocationData("Lowee Castle Interior","Viral Child Wolf", 158, "Enemy"),
+#LocationData("Lowee Castle Interior","Lowee Defense Guard", 166, "Enemy"),
+#LocationData("Lowee Castle Interior","Strange Person ", 245, "Enemy"),
+#LocationData("Lowee Castle Interior","Skeleton", 252, "Enemy"),
+#LocationData("Lowee Castle Interior","Fenrir", 420, "Big Enemy"),
+#)

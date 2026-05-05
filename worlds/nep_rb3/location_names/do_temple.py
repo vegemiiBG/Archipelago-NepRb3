@@ -17,3 +17,10 @@ LocationData("Do Temple","Treasure 3", 65_3, "Treasure"),
 LocationData("Do Temple","Treasure 4", 65_4, "Treasure"),
 LocationData("Do Temple","Treasure 5", 65_5, "Treasure"),
 )
+DoTempleEnemies: typing.List[LocationData] = (
+LocationData("Do Temple","Dinosauroid", 275, "Enemy"),
+LocationData("Do Temple","Viral Dinosauroid", 285, "Enemy"),
+LocationData("Do Temple","Shimamo's Brother", 309, "Enemy"),
+#LocationData("Do Temple","Promise Ring", 245, "Enemy"), Duplicate Enemy from City Center
+LocationData("Do Temple","Suzaku", 418, "Big Enemy"),
+)

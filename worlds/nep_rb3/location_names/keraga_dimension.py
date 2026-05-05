@@ -16,3 +16,10 @@ LocationData("Keraga Dimension","Treasure 3", 61_3, "Treasure"),
 LocationData("Keraga Dimension","Treasure 4", 61_4, "Treasure"),
 LocationData("Keraga Dimension","Treasure 5", 61_5, "Treasure"),
 )
+KeragaDimensionEnemies: typing.List[LocationData] = (
+LocationData("Keraga Dimension","Mega Spider", 312, "Enemy"),
+#LocationData("Keraga Dimension","EDGE", 158, "Enemy"),               \\ They Appear in another Dungeon with same ID
+#LocationData("Keraga Dimension","Next-gen Bit", 166, "Enemy"),
+#LocationData("Keraga Dimension","Bundodo Old Man", 245, "Enemy"),
+LocationData("Keraga Dimension","Cyber Dolphin", 409, "Big Enemy"),
+)

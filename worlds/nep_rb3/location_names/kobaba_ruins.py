@@ -20,3 +20,11 @@ LocationData("Kobaba Ruins","Treasure 5", 46_5, "Treasure"),
 LocationData("Kobaba Ruins","Treasure 6", 46_6, "Treasure"),
 LocationData("Kobaba Ruins","Treasure 7", 46_7, "Treasure"),
 )
+KobabaRuinsEnemies: typing.List[LocationData] = (
+LocationData("Kobaba Ruins","Leanbox Soldier", 295, "Enemy"),
+LocationData("Kobaba Ruins","Crack Tail", 201, "Enemy"),
+LocationData("Kobaba Ruins","Missile Golem", 160, "Enemy"),
+LocationData("Kobaba Ruins","Viral Missile Golem", 168, "Enemy"),
+#LocationData("Kobaba Ruins","Strange Person", 252, "Enemy"),   There is a sooner logical dungeon with the same enemy
+#LocationData("Kobaba Ruins","Forest Crab", 437, "Big Enemy"), Same Enemy appears in another Leanbox Dungeon
+)

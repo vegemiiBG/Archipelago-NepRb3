@@ -17,3 +17,10 @@ LocationData("Zeca Ruins No.2","Treasure 3", 36_3, "Treasure"),
 LocationData("Zeca Ruins No.2","Treasure 4", 36_4, "Treasure"),
 LocationData("Zeca Ruins No.2","Treasure 5", 36_5, "Treasure"),
 )
+ZecaRuinsNo2Enemies: typing.List[LocationData] = (
+LocationData("Zeca Ruins No.2","Normal Shampuru", 345, "Enemy"),
+LocationData("Zeca Ruins No.2","Magical Shampuru", 347, "Enemy"),
+LocationData("Zeca Ruins No.2","Buff Shampuru", 346, "Enemy"),
+LocationData("Zeca Ruins No.2","Metal Dogoo", 102, "Enemy"),
+LocationData("Zeca Ruins No.2","Dangerous Shampuru", 444, "Big Enemy"),
+)

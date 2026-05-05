@@ -18,5 +18,11 @@ LocationData("Kuzarat Facility 1","Treasure 3", 9_3, "Treasure"),
 LocationData("Kuzarat Facility 1","Treasure 4", 9_4, "Treasure"),
 LocationData("Kuzarat Facility 1","Treasure 5", 9_5, "Treasure"),
 )
-
+KuzaratFacility1Enemies: typing.List[LocationData] = (
+LocationData("Kuzarat Facility 1","Poxvader", 152, "Enemy"),
+LocationData("Kuzarat Facility 1","Custom Bit", 124, "Enemy"),
+LocationData("Kuzarat Facility 1","Healing Dogoo", 106, "Enemy"),
+LocationData("Kuzarat Facility 1","R-4", 139, "Enemy"),
+LocationData("Kuzarat Facility 1","R4i-SDHC", 419, "Big Enemy"),
+)
 

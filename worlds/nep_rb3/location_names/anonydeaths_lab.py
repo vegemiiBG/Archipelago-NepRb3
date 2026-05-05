@@ -18,3 +18,9 @@ LocationData("Anonydeath's Lab","Treasure 3", 29_3, "Treasure"),
 LocationData("Anonydeath's Lab","Treasure 4", 29_4, "Treasure"),
 LocationData("Anonydeath's Lab","Treasure 5", 29_5, "Treasure"),
 )
+AnonydeathsLabEnemies: typing.List[LocationData] = (
+LocationData("Anonydeath's Lab","Blue Sun ", 202, "Enemy"),
+LocationData("Anonydeath's Lab","Ganglord Panther ", 289, "Enemy"),
+LocationData("Anonydeath's Lab","EDGE", 142, "Enemy"),
+LocationData("Anonydeath's Lab","Panzer", 422, "Big Enemy"),
+)
