@@ -18,14 +18,10 @@ LocationData("Powerlevel Island","Treasure 5", 37_5, "Treasure"),
 LocationData("Powerlevel Island","Treasure 6", 37_6, "Treasure"),
 )
 PowerlevelIslandEnemies: typing.List[LocationData] = (
-LocationData("Powerlevel Island","Nanovader", 153, "Enemy"),
-LocationData("Powerlevel Island","Earth Golem", 158, "Enemy"),
-LocationData("Powerlevel Island","Viral Earth Golem", 166, "Enemy"),
-LocationData("Powerlevel Island","Aluna", 245, "Enemy"),
-LocationData("Powerlevel Island","Viral Aluna", 252, "Enemy"),
-LocationData("Powerlevel Island","Strange Person", 240, "Enemy"),
-LocationData("Powerlevel Island","Self-Defense System ", 420, "Big Enemy"),
-
-
-
+LocationData("Powerlevel Island","Penguin", 344, "Enemy"),
+LocationData("Powerlevel Island","Ms. Bashful", 224, "Enemy"),
+LocationData("Powerlevel Island","Bashful", 213, "Enemy"),
+LocationData("Powerlevel Island","Sea Golem", 161, "Enemy"),
+LocationData("Powerlevel Island","Viral Sea Golem", 169, "Enemy"),
+LocationData("Powerlevel Island","Mega Turtle", 442, "Big Enemy"),
 )

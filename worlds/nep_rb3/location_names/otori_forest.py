@@ -21,15 +21,9 @@ LocationData("Otori Forest","Treasure 5", 35_5, "Treasure"),
 LocationData("Otori Forest","Treasure 6", 35_6, "Treasure"),
 )
 OtoriForestEnemies: typing.List[LocationData] = (
-LocationData("Otori Forest","Nanovader", 153, "Enemy"),
-LocationData("Otori Forest","Earth Golem", 158, "Enemy"),
-LocationData("Otori Forest","Viral Earth Golem", 166, "Enemy"),
-LocationData("Otori Forest","Aluna", 245, "Enemy"),
-LocationData("Otori Forest","Viral Aluna", 252, "Enemy"),
-LocationData("Otori Forest","Strange Person", 240, "Enemy"),
-LocationData("Otori Forest","Self-Defense System ", 420, "Big Enemy"),
-
-
-
+LocationData("Otori Forest","Contracted Angel ", 258, "Enemy"),
+LocationData("Otori Forest","Exhausted Jelly ", 340, "Enemy"),
+LocationData("Otori Forest","Sergeant Froggy ", 149, "Enemy"),
+LocationData("Otori Forest","Hikky", 231, "Enemy"),
+LocationData("Otori Forest","Viral Hikky ", 235, "Enemy"),
 )
-#aaaa

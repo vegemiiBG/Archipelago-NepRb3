@@ -16,13 +16,12 @@ LocationData("Planeptune Alley","Treasure 3", 58_3, "Treasure"),
 LocationData("Planeptune Alley","Treasure 4", 58_4, "Treasure"),
 )
 PlaneptuneAlleyEnemies: typing.List[LocationData] = (
-LocationData("Planeptune Alley","Nanovader", 153, "Enemy"),
-LocationData("Planeptune Alley","Earth Golem", 158, "Enemy"),
-LocationData("Planeptune Alley","Viral Earth Golem", 166, "Enemy"),
-LocationData("Planeptune Alley","Aluna", 245, "Enemy"),
-LocationData("Planeptune Alley","Viral Aluna", 252, "Enemy"),
-LocationData("Planeptune Alley","Strange Person", 240, "Enemy"),
-LocationData("Planeptune Alley","Self-Defense System ", 420, "Big Enemy"),
+LocationData("Planeptune Alley","Death Boy", 215, "Enemy"),
+LocationData("Planeptune Alley","Death Girl", 226, "Enemy"),
+LocationData("Planeptune Alley","Dragonia", 276, "Enemy"),
+LocationData("Planeptune Alley","Viral Dragonia", 286, "Enemy"),
+LocationData("Planeptune Alley","ASIC Remnants", 299, "Enemy"),
+LocationData("Planeptune Alley","Dominance Machine", 426, "Big Enemy"),
 
 
 

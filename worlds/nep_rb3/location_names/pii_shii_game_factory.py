@@ -16,14 +16,9 @@ LocationData("Pii Shii Game Factory","Treasure 3", 64_3, "Treasure"),
 LocationData("Pii Shii Game Factory","Treasure 4", 64_4, "Treasure"),
 )
 PiiShiiGameFactoryEnemies: typing.List[LocationData] = (
-LocationData("Pii Shii Game Factory","Nanovader", 153, "Enemy"),
-LocationData("Pii Shii Game Factory","Earth Golem", 158, "Enemy"),
-LocationData("Pii Shii Game Factory","Viral Earth Golem", 166, "Enemy"),
-LocationData("Pii Shii Game Factory","Aluna", 245, "Enemy"),
-LocationData("Pii Shii Game Factory","Viral Aluna", 252, "Enemy"),
-LocationData("Pii Shii Game Factory","Strange Person", 240, "Enemy"),
-LocationData("Pii Shii Game Factory","Self-Defense System ", 420, "Big Enemy"),
-
-
-
+LocationData("Pii Shii Game Factory","Tom", 194, "Enemy"),
+LocationData("Pii Shii Game Factory","Demon Spider", 313, "Enemy"),
+LocationData("Pii Shii Game Factory","A2-i", 143, "Enemy"),
+LocationData("Pii Shii Game Factory","Queen Spider", 314, "Enemy"),
+LocationData("Pii Shii Game Factory","Tank Type-99", 423, "Big Enemy"),
 )

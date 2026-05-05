@@ -18,11 +18,10 @@ LocationData("Rud Arms Sewer N.","Treasure 4", 11_4, "Treasure"),
 LocationData("Rud Arms Sewer N.","Treasure 5", 11_5, "Treasure"),
 )
 RudArmsSewerNEnemies: typing.List[LocationData] = (
-LocationData("Rud Arms Sewer N.","Nanovader", 153, "Enemy"),
-LocationData("Rud Arms Sewer N.","Earth Golem", 158, "Enemy"),
-LocationData("Rud Arms Sewer N.","Viral Earth Golem", 166, "Enemy"),
-LocationData("Rud Arms Sewer N.","Aluna", 245, "Enemy"),
-LocationData("Rud Arms Sewer N.","Viral Aluna", 252, "Enemy"),
-LocationData("Rud Arms Sewer N.","Strange Person", 240, "Enemy"),
-LocationData("Rud Arms Sewer N.","Self-Defense System ", 420, "Big Enemy"),
+LocationData("Rud Arms Sewer N.","Cold Boy", 207, "Enemy"),
+LocationData("Rud Arms Sewer N.","Cold Girl", 218, "Enemy"),
+LocationData("Rud Arms Sewer N.","Magic Stone", 196, "Enemy"),
+LocationData("Rud Arms Sewer N.","Ice Golem", 157, "Enemy"),
+LocationData("Rud Arms Sewer N.","Viral Ice Golem", 165, "Enemy"),
+LocationData("Rud Arms Sewer N.","Elemental Dragon", 403, "Big Enemy"),
 )

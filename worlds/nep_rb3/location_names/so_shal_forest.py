@@ -17,11 +17,11 @@ LocationData("So Shal Forest","Treasure 4", 62_4, "Treasure"),
 LocationData("So Shal Forest","Treasure 5", 62_5, "Treasure"),
 )
 SoShalForestEnemies: typing.List[LocationData] = (
-LocationData("So Shal Forest","Nanovader", 153, "Enemy"),
-LocationData("So Shal Forest","Earth Golem", 158, "Enemy"),
-LocationData("So Shal Forest","Viral Earth Golem", 166, "Enemy"),
-LocationData("So Shal Forest","Aluna", 245, "Enemy"),
-LocationData("So Shal Forest","Viral Aluna", 252, "Enemy"),
-LocationData("So Shal Forest","Strange Person", 240, "Enemy"),
-LocationData("So Shal Forest","Self-Defense System ", 420, "Big Enemy"),
+LocationData("So Shal Forest","Prince Boxbird", 177, "Enemy"),
+LocationData("So Shal Forest","Paralyze Dogoo", 112, "Enemy"),
+LocationData("So Shal Forest","Lizard Knight", 274, "Enemy"),
+LocationData("So Shal Forest","Viral Lizard Knight", 283, "Enemy"),
+LocationData("So Shal Forest","Insatiable Tree", 233, "Enemy"),
+LocationData("So Shal Forest","Viral Insatiable Tree", 237, "Enemy"),
+LocationData("So Shal Forest","1000-Year Old Dolphin", 411, "Big Enemy"),
 )
