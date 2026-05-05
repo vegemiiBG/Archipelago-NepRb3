@@ -75,6 +75,8 @@ class NepRb3World(World):
         # Starting Character
         starting_character = CharacterNames.neptune
         self.multiworld.push_precollected(self.create_item(starting_character))
+        starting_character = CharacterNames.nepgear
+        self.multiworld.push_precollected(self.create_item(starting_character))
 
         for CharacterName in characterItemList.keys():
             if starting_character == CharacterName: continue

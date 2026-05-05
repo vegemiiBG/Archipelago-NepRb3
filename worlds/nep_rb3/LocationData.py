@@ -1,6 +1,6 @@
 location_base_id = 7489397493
 treasure_base_id = 1000000
-enemy_base_id = 3000000
+enemy_base_id = 2000000
 
 class LocationData:
     def __init__(self,region, name, id_, itemType):
@@ -11,3 +11,7 @@ class LocationData:
 
         if itemType == "Treasure":
             self.id = self.id + treasure_base_id
+        if itemType =="Enemy":
+            self.id = self.id + enemy_base_id
+        if itemType =="Big Enemy":
+            self.id = self.id + enemy_base_id
