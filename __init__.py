@@ -1,351 +1,211 @@
-import typing
-from ..LocationData import LocationData
+import importlib
+import importlib.abc
+import importlib.machinery
+import logging
+import os
+import sys
+import zipimport
+import time
+import dataclasses
+import json
+from pathlib import Path
+from types import ModuleType
+from typing import List, Sequence
+from zipfile import BadZipFile
 
-from .adaldik_forest import *
-from .anonydeaths_lab import *
-from .anonydeaths_lab_depths import *
-from .ario_plateau import *
-from .bandicrash import *
-from .castle_chambers import *
-from .city_center import *
-from .digital_future_land import *
-from .digital_future_depths import *
-from .do_temple import *
-from .duo_r_ruins import *
-from .em_es_magma_cave import *
-from .em_es_magma_cave_depths import *
-from .extradimensional_space import *
-from .gigo_depths import *
-from .gigo_main_entrance import *
-from .graphic_pass import *
-from .graphic_pass_peak import *
-from .halo_forest import *
-from .haneda_mountain_range import *
-from .haneda_mountain_peak import *
-from .jet_set_range import *
-from .jet_set_peak import *
-from .keraga_dimension import *
-from .koagura_plateau import *
-from .kobaba_ruins import *
-from .kuzarat_facility_1 import *
-from .kuzarat_facility_2 import *
-from .lowee_castle_exterior import *
-from .lowee_castle_interior import *
-from .lowee_castle_northern_space import *
-from .lowee_castle_southern_space import *
-from .luji_plateau import *
-from .magma_cave import *
-from .magma_cave_depths import *
-from .metroid_shelter import *
-from .metroid_shelter_depths import *
-from .mines import *
-from .national_factory import *
-from .nekutoki_forest import *
-from .otori_cave import *
-from .otori_forest import *
-from .pii_shii_game_factory import *
-from .planeptune_alley import *
-from .powerlevel_island import *
-from .powerlevel_island_interior import *
-from .ps_dimension import *
-from .reload_grasslands import *
-from .rud_arms_sewer_n import *
-from .rud_arms_sewer_s import *
-from .so_shal_forest import *
-from .soni_wetlands import *
-from .station_area import *
-from .suaho_mountain_range import *
-from .suaho_mountain_peak import *
-from .under_inverse import *
-from .under_inverse_depths import *
-from .underground_cave import *
-from .vida_dimension import *
-from .virtua_forest import *
-from .virtua_forest_depths import *
-from .virtua_forest_safe_zone import *
-from .wanderers_cave import *
-from .wanderers_cave_depths import *
-from .zeca_ruins_no1 import *
-from .zeca_ruins_no2 import *
-from .zega_forest import *
+from NetUtils import DataPackage
+from Utils import local_path, user_path, Version, version_tuple, tuplize_version, messagebox
 
-gathers: typing.List[LocationData] = (
-    AdaldikForest,
-    AnonydeathsLab,
-    AnonydeathsLabDepths,
-    ArioPlateau,
-    Bandicrash,
-    CastleChambers,
-    CityCenter,
-    DigitalFutureLand,
-    DigitalFutureDepths,
-    DoTemple,
-    DuoRRuins,
-    EmEsMagmaCave,
-    EmEsMagmaCaveDepths,
-    ExtradimensionalSpace,
-    GigoMainEntrance,
-    GigoDepths,
-    GraphicPass,
-    GraphicPassPeak,
-    HaloForest,
-    HanedaMountainRange,
-    HanedaMountainPeak,
-    JetSetRange,
-    JetSetPeak,
-    KeragaDimension,
-    KoaguraPlateau,
-    KobabaRuins,
-    KuzaratFacility1,
-    KuzaratFacility2,
-    LoweeCastleExterior,
-    LoweeCastleInterior,
-    LoweeCastleNorthernSpace,
-    LoweeCastleSouthernSpace,
-    LujiPlateau,
-    MagmaCave,
-    MagmaCaveDepths,
-    MetroidShelter,
-    MetroidShelterDepths,
-    Mines,
-    NationalFactory,
-    NekutokiForest,
-    OtoriCave,
-    OtoriForest,
-    PiiShiiGameFactory,
-    PlaneptuneAlley,
-    PowerlevelIsland,
-    PowerlevelIslandInterior,
-    PSDimension,
-    ReloadGrasslands,
-    RudArmsSewerN,
-    RudArmsSewerS,
-    SoShalForest,
-    SoniWetlands,
-    StationArea,
-    SuahoMountainRange,
-    SuahoMountainPeak,
-    UnderInverse,
-    UnderInverseDepths,
-    UndergroundCave,
-    VidaDimension,
-    VirtuaForest,
-    VirtuaForestDepths,
-    VirtuaForestSafeZone,
-    WanderersCave,
-    WanderersCaveDepths,
-    ZecaRuinsNo1,
-    ZecaRuinsNo2,
-    ZegaForest,
-)
+local_folder = os.path.dirname(__file__)
+user_folder = user_path("worlds") if user_path() != local_path() else user_path("custom_worlds")
+try:
+    os.makedirs(user_folder, exist_ok=True)
+except OSError:  # can't access/write?
+    user_folder = None
 
-treasures: typing.List[LocationData] = (
-    AdaldikForestTreasures,
-    AnonydeathsLabTreasures,
-    AnonydeathsLabDepthsTreasures,
-    ArioPlateauTreasures,
-    BandicrashTreasures,
-    CastleChambersTreasures,
-    CityCenterTreasures,
-    DigitalFutureLandTreasures,
-    DigitalFutureDepthsTreasures,
-    DoTempleTreasures,
-    DuoRRuinsTreasures,
-    EmEsMagmaCaveTreasures,
-    EmEsMagmaCaveDepthsTreasures,
-    ExtradimensionalSpaceTreasures,
-    GigoMainEntranceTreasures,
-    GigoDepthsTreasures,
-    GraphicPassTreasures,
-    GraphicPassPeakTreasures,
-    HaloForestTreasures,
-    HanedaMountainRangeTreasures,
-    HanedaMountainPeakTreasures,
-    JetSetRangeTreasures,
-    JetSetPeakTreasures,
-    KeragaDimensionTreasures,
-    KoaguraPlateauTreasures,
-    KobabaRuinsTreasures,
-    KuzaratFacility1Treasures,
-    KuzaratFacility2Treasures,
-    LoweeCastleExteriorTreasures,
-    LoweeCastleInteriorTreasures,
-    LoweeCastleNorthernSpaceTreasures,
-    LoweeCastleSouthernSpaceTreasures,
-    LujiPlateauTreasures,
-    MagmaCaveTreasures,
-    MagmaCaveDepthsTreasures,
-    MetroidShelterTreasures,
-    MetroidShelterDepthsTreasures,
-    MinesTreasures,
-    NationalFactoryTreasures,
-    NekutokiForestTreasures,
-    OtoriCaveTreasures,
-    OtoriForestTreasures,
-    PiiShiiGameFactoryTreasures,
-    PlaneptuneAlleyTreasures,
-    PowerlevelIslandTreasures,
-    PowerlevelIslandInteriorTreasures,
-    PSDimensionTreasures,
-    ReloadGrasslandsTreasures,
-    RudArmsSewerNTreasures,
-    RudArmsSewerSTreasures,
-    SoShalForestTreasures,
-    SoniWetlandsTreasures,
-    StationAreaTreasures,
-    SuahoMountainRangeTreasures,
-    SuahoMountainPeakTreasures,
-    UnderInverseTreasures,
-    UnderInverseDepthsTreasures,
-    UndergroundCaveTreasures,
-    VidaDimensionTreasures,
-    VirtuaForestTreasures,
-    VirtuaForestDepthsTreasures,
-    VirtuaForestSafeZoneTreasures,
-    WanderersCaveTreasures,
-    WanderersCaveDepthsTreasures,
-    ZecaRuinsNo1Treasures,
-    ZecaRuinsNo2Treasures,
-    ZegaForestTreasures,
-)
+__all__ = [
+    "network_data_package",
+    "AutoWorldRegister",
+    "world_sources",
+    "local_folder",
+    "user_folder",
+    "failed_world_loads",
+]
 
-enemies: typing.List[LocationData] = (
-    AdaldikForestEnemies,
-    AnonydeathsLabDepthsEnemies,
-    AnonydeathsLabEnemies,
-    ArioPlateauEnemies,
-    BandicrashEnemies,
-    CastleChambersEnemies,
-    CityCenterEnemies,
-    #DigitalFutureDepthsEnemies,
-    DigitalFutureLandEnemies,
-    DoTempleEnemies,
-    DuoRRuinsEnemies,
-    #EmEsMagmaCaveDepthsEnemies,
-    EmEsMagmaCaveEnemies,
-    ExtradimensionalSpaceEnemies,
-    GigoDepthsEnemies,
-    GigoMainEntranceEnemies,
-    GraphicPassEnemies,
-    #GraphicPassPeakEnemies,
-    HaloForestEnemies,
-    HanedaMountainPeakEnemies,
-    HanedaMountainRangeEnemies,
-    JetSetPeakEnemies,
-    JetSetRangeEnemies,
-    KeragaDimensionEnemies,
-    KoaguraPlateauEnemies,
-    KobabaRuinsEnemies,
-    KuzaratFacility1Enemies,
-    KuzaratFacility2Enemies,
-    LoweeCastleExteriorEnemies,
-    #LoweeCastleInteriorEnemies,
-    LoweeCastleNorthernSpaceEnemies,
-    LoweeCastleSouthernSpaceEnemies,
-    LujiPlateauEnemies,
-    MagmaCaveDepthsEnemies,
-    MagmaCaveEnemies,
-    MetroidShelterDepthsEnemies,
-    MetroidShelterEnemies,
-    MinesEnemies,
-    NationalFactoryEnemies,
-    NekutokiForestEnemies,
-    OtoriCaveEnemies,
-    OtoriForestEnemies,
-    PiiShiiGameFactoryEnemies,
-    PlaneptuneAlleyEnemies,
-    PowerlevelIslandEnemies,
-    #PowerlevelIslandInteriorEnemies,
-    PSDimensionEnemies,
-    ReloadGrasslandsEnemies,
-    RudArmsSewerNEnemies,
-    RudArmsSewerSEnemies,
-    SoShalForestEnemies,
-    SoniWetlandsEnemies,
-    StationAreaEnemies,
-    #SuahoMountainPeakEnemies,
-    SuahoMountainRangeEnemies,
-    UndergroundCaveEnemies,
-    #UnderInverseDepthsEnemies,
-    UnderInverseEnemies,
-    VidaDimensionEnemies,
-    VirtuaForestEnemies,
-    VirtuaForestSafeZoneEnemies,
-    WanderersCaveDepthsEnemies,
-    WanderersCaveEnemies,
-    ZecaRuinsNo1Enemies,
-    ZecaRuinsNo2Enemies,
-    ZegaForestEnemies,
-)
 
-goalLocation: typing.List[LocationData] = (
-    CityCenterGoal,
-)
+failed_world_loads: List[str] = []
 
-levels: typing.List[LocationData] = (
-LocationData("Adaldik Forest","Grinding",40,"Level"),
-LocationData("Anonydeath's Lab Depths","Grinding",60,"Level"),
-LocationData("Anonydeath's Lab","Grinding",60,"Level"),
-LocationData("Ario Plateau","Grinding",60,"Level"),
-LocationData("Bandicrash","Grinding",20,"Level"),
-LocationData("Castle Chambers","Grinding",30,"Level"),
-LocationData("City Center","Grinding",70,"Level"),
-LocationData("Do Temple","Grinding",100,"Level"),
-LocationData("Duo R Ruins","Grinding",90,"Level"),
-LocationData("EM ES Magma Cave Depths","Grinding",80,"Level"),
-LocationData("EM ES Magma Cave","Grinding",80,"Level"),
-LocationData("Extradimensional Space","Grinding",70,"Level"),
-LocationData("Gigo Depths","Grinding",40,"Level"),
-LocationData("Gigo Main Entrance","Grinding",40,"Level"),
-LocationData("Graphic Pass Peak","Grinding",70,"Level"),
-LocationData("Graphic Pass","Grinding",70,"Level"),
-LocationData("Halo Forest","Grinding",40,"Level"),
-LocationData("Haneda Mountain Peak","Grinding",60,"Level"),
-LocationData("Haneda Mountain Range","Grinding",60,"Level"),
-LocationData("Jet Set Peak","Grinding",10,"Level"),
-LocationData("Jet Set Range","Grinding",10,"Level"),
-LocationData("Keraga Dimension","Grinding",60,"Level"),
-LocationData("Koagura Plateau","Grinding",100,"Level"),
-LocationData("Kobaba Ruins","Grinding",60,"Level"),
-LocationData("Kuzarat Facility 1","Grinding",20,"Level"),
-LocationData("Kuzarat Facility 2","Grinding",20,"Level"),
-LocationData("Lowee Castle Exterior","Grinding",30,"Level"),
-LocationData("Lowee Castle Interior","Grinding",30,"Level"),
-LocationData("Lowee Castle Northern Space","Grinding",80,"Level"),
-LocationData("Lowee Castle Southern Space","Grinding",80,"Level"),
-LocationData("Luji Plateau","Grinding",60,"Level"),
-LocationData("Magma Cave Depths","Grinding",60,"Level"),
-LocationData("Magma Cave","Grinding",60,"Level"),
-LocationData("Metroid Shelter","Grinding",50,"Level"),
-LocationData("Metroid Shelter Depths","Grinding",50,"Level"),
-LocationData("Mines","Grinding",50,"Level"),
-LocationData("National Factory","Grinding",50,"Level"),
-LocationData("Nekutoki Forest","Grinding",60,"Level"),
-LocationData("Otori Cave","Grinding",60,"Level"),
-LocationData("Otori Forest","Grinding",10,"Level"),
-LocationData("Pii Shii Game Factory","Grinding",70,"Level"),
-LocationData("Planeptune Alley","Grinding",100,"Level"),
-LocationData("Powerlevel Island Interior","Grinding",70,"Level"),
-LocationData("Powerlevel Island","Grinding",70,"Level"),
-LocationData("PS Dimension","Grinding",50,"Level"),
-LocationData("Reload Grasslands","Grinding",30,"Level"),
-LocationData("Rud Arms Sewer N.","Grinding",30,"Level"),
-LocationData("Rud Arms Sewer S.","Grinding",30,"Level"),
-LocationData("So Shal Forest","Grinding",80,"Level"),
-LocationData("Soni Wetlands","Grinding",30,"Level"),
-LocationData("Station Area","Grinding",10,"Level"),
-LocationData("Suaho Mountain Range","Grinding",40,"Level"),
-LocationData("Suaho Mountain Peak","Grinding",40,"Level"),
-LocationData("Under Inverse","Grinding",100,"Level"),
-LocationData("Under Inverse Depths","Grinding",100,"Level"),
-LocationData("Underground Cave","Grinding",30,"Level"),
-LocationData("Vida Dimension","Grinding",80,"Level"),
-LocationData("Virtua Forest Depths","Grinding",70,"Level"),
-LocationData("Virtua Forest Safe Zone","Grinding",10,"Level"),
-LocationData("Virtua Forest","Grinding",70,"Level"),
-LocationData("Wanderer's Cave","Grinding",20,"Level"),
-LocationData("Wanderer's Cave Depths","Grinding",20,"Level"),
-LocationData("Zeca Ruins No.1","Grinding",10,"Level"),
-LocationData("Zeca Ruins No.2","Grinding",20,"Level"),
-LocationData("Zega Forest","Grinding",50,"Level"),
-)
+
+@dataclasses.dataclass(order=True)
+class WorldSource:
+    path: str  # typically relative path from this module
+    is_zip: bool = False
+    relative: bool = True  # relative to regular world import folder
+    time_taken: float = -1.0
+    version: Version = Version(0, 0, 0)
+
+    def __repr__(self) -> str:
+        return f"{self.__class__.__name__}({self.path}, is_zip={self.is_zip}, relative={self.relative})"
+
+    @property
+    def resolved_path(self) -> str:
+        if self.relative:
+            return os.path.join(local_folder, self.path)
+        return self.path
+
+    def load(self) -> bool:
+        try:
+            start = time.perf_counter()
+            importlib.import_module(f".{Path(self.path).stem}", "worlds")
+            self.time_taken = time.perf_counter()-start
+            return True
+
+        except Exception:
+            # A single world failing can still mean enough is working for the user, log and carry on
+            import traceback
+            import io
+            file_like = io.StringIO()
+            print(f"Could not load world {self}:", file=file_like)
+            traceback.print_exc(file=file_like)
+            file_like.seek(0)
+            logging.exception(file_like.read())
+            failed_world_loads.append(os.path.basename(self.path).rsplit(".", 1)[0])
+            return False
+
+
+# find potential world containers, currently folders and zip-importable .apworld's
+world_sources: List[WorldSource] = []
+for folder in (folder for folder in (user_folder, local_folder) if folder):
+    relative = folder == local_folder
+    for entry in os.scandir(folder):
+        # prevent loading of __pycache__ and allow _* for non-world folders, disable files/folders starting with "."
+        if not entry.name.startswith(("_", ".")):
+            file_name = entry.name if relative else os.path.join(folder, entry.name)
+            if entry.is_dir():
+                if os.path.isfile(os.path.join(entry.path, '__init__.py')):
+                    world_sources.append(WorldSource(file_name, relative=relative))
+                elif os.path.isfile(os.path.join(entry.path, '__init__.pyc')):
+                    world_sources.append(WorldSource(file_name, relative=relative))
+                else:
+                    logging.warning(f"excluding {entry.name} from world sources because it has no __init__.py")
+            elif entry.is_file() and entry.name.endswith(".apworld"):
+                world_sources.append(WorldSource(file_name, is_zip=True, relative=relative))
+
+# import all submodules to trigger AutoWorldRegister
+world_sources.sort()
+apworlds: list[WorldSource] = []
+for world_source in world_sources:
+    # load all loose files first:
+    if world_source.is_zip:
+        apworlds.append(world_source)
+    else:
+        world_source.load()
+
+from .AutoWorld import AutoWorldRegister
+
+for world_source in world_sources:
+    if not world_source.is_zip:
+        # look for manifest
+        manifest = {}
+        for dirpath, dirnames, filenames in os.walk(world_source.resolved_path):
+            for file in filenames:
+                if file.endswith("archipelago.json"):
+                    with open(os.path.join(dirpath, file), mode="r", encoding="utf-8") as manifest_file:
+                        manifest = json.load(manifest_file)
+                    break
+            if manifest:
+                break
+        game = manifest.get("game")
+        if game in AutoWorldRegister.world_types:
+            AutoWorldRegister.world_types[game].world_version = tuplize_version(manifest.get("world_version", "0.0.0"))
+
+if apworlds:
+    # encapsulation for namespace / gc purposes
+    def load_apworlds() -> None:
+        global apworlds
+        from .Files import APWorldContainer, InvalidDataError
+        core_compatible: list[tuple[WorldSource, APWorldContainer]] = []
+
+        def fail_world(game_name: str, reason: str, add_as_failed_to_load: bool = True) -> None:
+            if add_as_failed_to_load:
+                failed_world_loads.append(game_name)
+            logging.warning(reason)
+
+        for apworld_source in apworlds:
+            apworld: APWorldContainer = APWorldContainer(apworld_source.resolved_path)
+            # populate metadata
+            try:
+                apworld.read()
+            except InvalidDataError as e:
+                if version_tuple < (0, 7, 0):
+                    logging.error(
+                        f"Invalid or missing manifest file for {apworld_source.resolved_path}. "
+                        "This apworld will stop working with Archipelago 0.7.0."
+                    )
+                    logging.error(e)
+                else:
+                    raise e
+            except BadZipFile as e:
+                err_message = (f"The world source {apworld_source.resolved_path} is not a valid zip. "
+                               "It is likely either corrupted, or was packaged incorrectly.")
+
+                if sys.stdout:
+                    raise RuntimeError(err_message) from e
+                else:
+                    messagebox("Couldn't load worlds", err_message, error=True)
+                    sys.exit(1)
+
+            if apworld.minimum_ap_version and apworld.minimum_ap_version > version_tuple:
+                fail_world(apworld.game,
+                           f"Did not load {apworld_source.path} "
+                           f"as its minimum core version {apworld.minimum_ap_version} "
+                           f"is higher than current core version {version_tuple}.")
+            elif apworld.maximum_ap_version and apworld.maximum_ap_version < version_tuple:
+                fail_world(apworld.game,
+                           f"Did not load {apworld_source.path} "
+                           f"as its maximum core version {apworld.maximum_ap_version} "
+                           f"is lower than current core version {version_tuple}.")
+            else:
+                core_compatible.append((apworld_source, apworld))
+        # load highest version first
+        core_compatible.sort(
+            key=lambda element: element[1].world_version if element[1].world_version else Version(0, 0, 0),
+            reverse=True)
+
+        apworld_module_specs = {}
+        class APWorldModuleFinder(importlib.abc.MetaPathFinder):
+            def find_spec(
+                    self, fullname: str, _path: Sequence[str] | None, _target: ModuleType = None
+            ) -> importlib.machinery.ModuleSpec | None:
+                return apworld_module_specs.get(fullname)
+
+        sys.meta_path.insert(0, APWorldModuleFinder())
+
+        for apworld_source, apworld in core_compatible:
+            if apworld.game and apworld.game in AutoWorldRegister.world_types:
+                fail_world(apworld.game,
+                           f"Did not load {apworld_source.path} "
+                           f"as its game {apworld.game} is already loaded.",
+                           add_as_failed_to_load=False)
+            else:
+                importer = zipimport.zipimporter(apworld_source.resolved_path)
+                world_name = Path(apworld.path).stem
+
+                spec = importer.find_spec(f"worlds.{world_name}")
+                apworld_module_specs[f"worlds.{world_name}"] = spec
+
+                apworld_source.load()
+                if apworld.game in AutoWorldRegister.world_types:
+                    # world could fail to load at this point
+                    if apworld.world_version:
+                        AutoWorldRegister.world_types[apworld.game].world_version = apworld.world_version
+    load_apworlds()
+    del load_apworlds
+
+del apworlds
+
+# Build the data package for each game.
+network_data_package: DataPackage = {
+    "games": {world_name: world.get_data_package_data() for world_name, world in AutoWorldRegister.world_types.items()},
+}
+
