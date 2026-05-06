@@ -22,7 +22,7 @@ components.append(Component(
     component_type=Type.CLIENT
 ))
 
-from .items import NepRb3Item, item_data, allItemData
+from .items import NepRb3Item, item_data, allItemData,apCharacterItemBaseID
 from .locations import NepRb3Location
 from .options import NepRb3Options
 from .locations import all_locations, gathers, location_table
@@ -73,8 +73,9 @@ class NepRb3World(World):
         for DungeonName in dungeonItemList.keys():
             item_pool.append(self.create_item(DungeonName))
         # Starting Character
-        starting_character = CharacterNames.neptune
+        starting_character = self.random.choice(list(characterItemList.keys()))
         self.multiworld.push_precollected(self.create_item(starting_character))
+        self.starting_character = characterItemList[starting_character].code - apCharacterItemBaseID
 
         for CharacterName in characterItemList.keys():
             if starting_character == CharacterName: continue
@@ -120,4 +121,6 @@ class NepRb3World(World):
         return
 
     def fill_slot_data(self) -> dict:
-        return
+        return {
+            "start_character":self.starting_character
+        }

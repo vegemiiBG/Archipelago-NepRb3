@@ -184,7 +184,7 @@ def set_all_lastation_dungeons(world: "NepRb3World") -> None:
     lastation_ps_dimension = world.get_entrance(DungeonNames.ps_dimension)
 
     world.set_rule(lastation_to_planeptune, lambda state:  (state.can_reach_region(DungeonNames.jet_set_range,world.player) or hasDungeonUnlocked(state,world.player,DungeonNames.jet_set_peak)) and checkDungeonRequirements(150, state, world.player))
-    world.set_rule(lastation_to_lowee, lambda state:  state.can_reach_region(DungeonNames.rud_arms_sewer_s,world.player) and checkDungeonRequirements(250, state, world.player))
+    world.set_rule(lastation_to_lowee, lambda state:  (state.can_reach_region(DungeonNames.rud_arms_sewer_s,world.player) or  hasDungeonUnlocked(state,world.player,DungeonNames.rud_arms_sewer_n))    and checkDungeonRequirements(250, state, world.player))
     world.set_rule(lastation_vida_dimension, lambda state: checkDungeonRequirements(2050, state, world.player)             and hasDungeonUnlocked(state,world.player,DungeonNames.vida_dimension))
     world.set_rule(lastation_gigo, lambda state: checkDungeonRequirements(900, state, world.player)                        and hasDungeonUnlocked(state,world.player,DungeonNames.gigo_main_entrance))
     world.set_rule(lastation_gigo_depths, lambda state:  state.can_reach_region(DungeonNames.gigo_main_entrance,world.player) and checkDungeonRequirements(350, state, world.player))
@@ -221,7 +221,7 @@ def set_all_lowee_dungeons(world: "NepRb3World") -> None:
     world.set_rule(lowee_castle_chambers, lambda state: checkDungeonRequirements(350, state, world.player)          and hasDungeonUnlocked(state,world.player,DungeonNames.castle_chambers))
     world.set_rule(lowee_castle_exterior, lambda state: checkDungeonRequirements(300, state, world.player)          and hasDungeonUnlocked(state,world.player,DungeonNames.lowee_castle_exterior))
     world.set_rule(lowee_castle_interior, lambda state:  state.can_reach_region(DungeonNames.lowee_castle_exterior,world.player) and checkDungeonRequirements(300, state, world.player))
-    world.set_rule(lowee_castle_northern_space, lambda state: checkDungeonRequirements(3500, state, world.player) and hasDungeonUnlocked(state,world.player,DungeonNames.lowee_castle_exterior))
+    world.set_rule(lowee_castle_northern_space, lambda state: checkDungeonRequirements(3500, state, world.player) and hasDungeonUnlocked(state,world.player,DungeonNames.lowee_castle_northern_space))
     world.set_rule(lowee_castle_southern_space, lambda state:  state.can_reach_region(DungeonNames.lowee_castle_northern_space,world.player) and checkDungeonRequirements(750, state, world.player))
     world.set_rule(lowee_luji_plateau, lambda state: checkDungeonRequirements(1250, state, world.player)             and hasDungeonUnlocked(state,world.player,DungeonNames.luji_plateau))
     world.set_rule(lowee_metroid_shelter, lambda state: checkDungeonRequirements(1350, state, world.player)          and hasDungeonUnlocked(state,world.player,DungeonNames.metroid_shelter))
