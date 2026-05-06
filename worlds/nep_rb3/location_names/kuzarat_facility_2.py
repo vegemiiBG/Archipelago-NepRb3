@@ -20,11 +20,9 @@ LocationData("Kuzarat Facility 2","Treasure 5", 10_5, "Treasure"),
 LocationData("Kuzarat Facility 2","Treasure 6", 10_6, "Treasure"),
 )
 KuzaratFacility2Enemies: typing.List[LocationData] = (
-LocationData("Kuzarat Facility 2","Matango", 153, "Enemy"),
-LocationData("Kuzarat Facility 2","Created Soldier", 158, "Enemy"),
-LocationData("Kuzarat Facility 2","Viral Earth Golem", 166, "Enemy"),  
-LocationData("Kuzarat Facility 2","Aluna", 245, "Enemy"),
-LocationData("Kuzarat Facility 2","Viral Aluna", 252, "Enemy"),
-LocationData("Kuzarat Facility 2","Strange Person", 240, "Enemy"),
-LocationData("Kuzarat Facility 2","Self-Defense System ", 420, "Big Enemy"),
+LocationData("Kuzarat Facility 2","Matango", 265, "Enemy"),
+LocationData("Kuzarat Facility 2","R-4 ", 139, "Enemy"),
+LocationData("Kuzarat Facility 2","Created Soldier", 291, "Enemy"),
+LocationData("Kuzarat Facility 1","Healing Dogoo", 106, "Enemy"),
+LocationData("Kuzarat Facility 2","R4i-SDHC", 419, "Big Enemy"),
 )

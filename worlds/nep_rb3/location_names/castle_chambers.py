@@ -19,8 +19,8 @@ LocationData("Castle Chambers","Treasure 5", 16_5, "Treasure"),
 CastleChambersEnemies: typing.List[LocationData] = (
 LocationData("Castle Chambers","Lowee Soldier", 293, "Enemy"),
 LocationData("Castle Chambers","Apeldoom", 199, "Enemy"),
-LocationData("Castle Chambers","Aluna", 166, "Enemy"),
-LocationData("Castle Chambers","Viral Aluna", 245, "Enemy"),
+LocationData("Castle Chambers","Aluna", 245, "Enemy"),
+#LocationData("Castle Chambers","Viral Aluna", 252, "Enemy"),
 LocationData("Castle Chambers","Lowee High Guard", 252, "Enemy"),
 LocationData("Castle Chambers","Self-Defense System", 420, "Big Enemy"),
 )
