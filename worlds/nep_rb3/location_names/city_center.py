@@ -25,7 +25,7 @@ LocationData("City Center","Viral High Lizard ", 282, "Enemy"),
 LocationData("City Center","Crescent Dragon", 405, "Big Enemy"),
 )
 
-CityCenterLevels: typing.list[LocationData] = (
+CityCenterLevels: typing.List[LocationData] = (
 LocationData("City Center","Level 70", None,0),
 
 )

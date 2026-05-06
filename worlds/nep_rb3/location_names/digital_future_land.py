@@ -16,6 +16,7 @@ LocationData("Digital Future Land","Treasure 3", 67_3, "Treasure"),
 LocationData("Digital Future Land","Treasure 4", 67_4, "Treasure"),
 LocationData("Digital Future Land","Treasure 5", 67_5, "Treasure"),
 )
+
 DigitalFutureLandEnemies: typing.List[LocationData] = (
 LocationData("Digital Future Land","Shampuru Loner", 805, "Enemy"),
 LocationData("Digital Future Land","Dokidoki Sister", 806, "Enemy"),

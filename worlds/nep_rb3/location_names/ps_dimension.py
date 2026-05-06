@@ -21,7 +21,7 @@ PSDimensionEnemies: typing.List[LocationData] = (
 LocationData("PS Dimension","Plam-met", 318, "Enemy"),
 LocationData("PS Dimension","High Heal Dogoo", 107, "Enemy"),
 LocationData("PS Dimension","Cuberial", 260, "Enemy"),
-#LocationData("PS Dimension","Dragon Warrior ", 245, "Enemy"),           same enemy in another dungeon
-#LocationData("PS Dimension","Viral Dragon Warrior ", 252, "Enemy"),
+LocationData("PS Dimension","Dragon Warrior ", 245, "Enemy"),     
+LocationData("PS Dimension","Viral Dragon Warrior ", 252, "Enemy"),
 LocationData("PS Dimension","Giant Dogoo", 517, "Big Enemy"),
 )

@@ -16,12 +16,12 @@ LocationData("Suaho Mountain Peak","Treasure 3", 60_3, "Treasure"),
 LocationData("Suaho Mountain Peak","Treasure 4", 60_4, "Treasure"),
 LocationData("Suaho Mountain Peak","Treasure 5", 60_5, "Treasure"),
 )
-#SuahoMountainPeakEnemies: typing.List[LocationData] = (              Same Exact Enemies as Area 1
-#LocationData("Suaho Mountain Range","Hyena", 179, "Enemy"), 
-#LocationData("Suaho Mountain Range","Viral Hyena", 185, "Enemy"),
-#LocationData("Suaho Mountain Range","Pinky", 208, "Enemy"),
-#LocationData("Suaho Mountain Range","Ms. Pinky", 219, "Enemy"),
-#LocationData("Suaho Mountain Range","Paradise Avian", 114, "Enemy"),
-#LocationData("Suaho Mountain Range","Viral Paradise Avian", 119, "Enemy"),
-#LocationData("Suaho Mountain Range","Roc", 413, "Big Enemy"),
-#)
+SuahoMountainPeakEnemies: typing.List[LocationData] = (      
+LocationData("Suaho Mountain Range","Hyena", 179, "Enemy"), 
+LocationData("Suaho Mountain Range","Viral Hyena", 185, "Enemy"),
+LocationData("Suaho Mountain Range","Pinky", 208, "Enemy"),
+LocationData("Suaho Mountain Range","Ms. Pinky", 219, "Enemy"),
+LocationData("Suaho Mountain Range","Paradise Avian", 114, "Enemy"),
+LocationData("Suaho Mountain Range","Viral Paradise Avian", 119, "Enemy"),
+LocationData("Suaho Mountain Range","Roc", 413, "Big Enemy"),
+)

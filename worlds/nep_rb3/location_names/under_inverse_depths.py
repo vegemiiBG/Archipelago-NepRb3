@@ -17,11 +17,11 @@ LocationData("Under Inverse Depths","Treasure 2", 57_2, "Treasure"),
 LocationData("Under Inverse Depths","Treasure 3", 57_3, "Treasure"),
 LocationData("Under Inverse Depths","Treasure 4", 57_4, "Treasure"),
 )
-#UnderInverseDepthsEnemies: typing.List[LocationData] = (          SAME exact enemies as area 1
-#LocationData("Under Inverse","Dogone", 322, "Enemy"),
-#LocationData("Under Inverse","Blaze Boy", 214, "Enemy"),
-#LocationData("Under Inverse","Blaze Girl", 225, "Enemy"),
-#LocationData("Under Inverse","Blaze Golem", 163, "Enemy"),
-#LocationData("Under Inverse","Viral Blaze Golem", 171, "Enemy"),
-#LocationData("Under Inverse","Volcano Turtle", 443, "Big Enemy"),
-#)
+UnderInverseDepthsEnemies: typing.List[LocationData] = ( 
+LocationData("Under Inverse","Dogone", 322, "Enemy"),
+LocationData("Under Inverse","Blaze Boy", 214, "Enemy"),
+LocationData("Under Inverse","Blaze Girl", 225, "Enemy"),
+LocationData("Under Inverse","Blaze Golem", 163, "Enemy"),
+LocationData("Under Inverse","Viral Blaze Golem", 171, "Enemy"),
+LocationData("Under Inverse","Volcano Turtle", 443, "Big Enemy"),
+)

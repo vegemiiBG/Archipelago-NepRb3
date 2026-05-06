@@ -19,7 +19,7 @@ LocationData("Soni Wetlands","Treasure 5", 39_5, "Treasure"),
 LocationData("Soni Wetlands","Treasure 6", 39_6, "Treasure"),
 )
 SoniWetlandsEnemies: typing.List[LocationData] = (
-#LocationData("Soni Wetlands","Matango ", 265, "Enemy"),     Same Enemy in another dungeon
+LocationData("Soni Wetlands","Matango ", 265, "Enemy"),  
 LocationData("Soni Wetlands","Healing Dogoo", 106, "Enemy"),
 LocationData("Soni Wetlands","Lean Tuna", 191, "Enemy"),
 LocationData("Soni Wetlands","Heavy Dragoon", 267, "Enemy"),

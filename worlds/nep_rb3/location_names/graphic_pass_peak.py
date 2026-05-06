@@ -16,11 +16,11 @@ LocationData("Graphic Pass Peak","Treasure 3", 51_3, "Treasure"),
 LocationData("Graphic Pass Peak","Treasure 4", 51_4, "Treasure"),
 LocationData("Graphic Pass Peak","Treasure 5", 51_5, "Treasure"),
 )
-#GraphicPassPeakEnemies: typing.List[LocationData] = (          Same Exact Enemies as Main Entrance
-#LocationData("Graphic Pass","Tetrisi", 326, "Enemy"),
-#LocationData("Graphic Pass","Cass Trap", 203, "Enemy"),
-#LocationData("Graphic Pass","Old Death", 243, "Enemy"),
-#LocationData("Graphic Pass","Nue", 116, "Enemy"),
-#LocationData("Graphic Pass","Viral Nue", 121, "Enemy"),
-#LocationData("Graphic Pass","Orthros", 432, "Big Enemy"),
-#)
+GraphicPassPeakEnemies: typing.List[LocationData] = (         
+LocationData("Graphic Pass","Tetrisi", 326, "Enemy"),
+LocationData("Graphic Pass","Cass Trap", 203, "Enemy"),
+LocationData("Graphic Pass","Old Death", 243, "Enemy"),
+LocationData("Graphic Pass","Nue", 116, "Enemy"),
+LocationData("Graphic Pass","Viral Nue", 121, "Enemy"),
+LocationData("Graphic Pass","Orthros", 432, "Big Enemy"),
+)
