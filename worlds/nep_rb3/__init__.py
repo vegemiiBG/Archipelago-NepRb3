@@ -70,7 +70,7 @@ class NepRb3World(World):
         item_pool.append(self.create_item(ItemNames.neps_pudding))
         item_pool.append(self.create_item(ItemNames.compas_syringe))
         item_pool.append(self.create_item(ItemNames.ifs_notebook))
-        item_pool.append(self.create_item(ItemNames.plutia_doll))
+        item_pool.append(self.create_item(ItemNames.stuffed_doll))
         item_pool.append(self.create_item(ItemNames.peashys_drawing))
         for DungeonName in dungeonItemList.keys():
             if "Safe Zone" in DungeonName:

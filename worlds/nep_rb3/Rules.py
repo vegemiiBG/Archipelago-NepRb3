@@ -132,5 +132,5 @@ def set_win_condition(world: "NepRb3World") -> None:
     goalLoc = world.multiworld.get_location("City Center - True Rei Ryghts", world.player)
 
     world.multiworld.completion_condition[world.player] = lambda state: state.has("Victory", world.player)
-    world.set_rule(goalLoc, lambda state: checkDungeonRequirements(5080, state, world.player) and hasDungeonUnlocked(state,world.player,DungeonNames.city_center) and state.has(ItemNames.neps_pudding, world.player) and state.has(ItemNames.compas_syringe, world.player) and state.has(ItemNames.ifs_notebook, world.player) and state.has(ItemNames.plutia_doll, world.player) and state.has(ItemNames.peashys_drawing, world.player))
+    world.set_rule(goalLoc, lambda state: checkDungeonRequirements(5080, state, world.player) and hasDungeonUnlocked(state,world.player,DungeonNames.city_center) and state.has(ItemNames.neps_pudding, world.player) and state.has(ItemNames.compas_syringe, world.player) and state.has(ItemNames.ifs_notebook, world.player) and state.has(ItemNames.stuffed_doll, world.player) and state.has(ItemNames.peashys_drawing, world.player))
     world.multiworld.get_location("City Center - True Rei Ryghts", world.player).place_locked_item(NepRb3Item("Victory", ItemClassification.progression, None, world.player))
