@@ -50,16 +50,18 @@ class NepRb3World(World):
         self.disabled_locations = set()
         # Create regions.
         devin = Nep3RegionDef(self.multiworld,self.player,self.options)
-        devin.setup_region_and_locations()
-        devin.create_dungeon_exits()
-        set_all_planeptune_dungeons(self)
-        set_all_lastation_dungeons(self)
-        set_all_lowee_dungeons(self)
-        set_all_leanbox_dungeons(self)
-        set_all_hyper_dungeons(self)
-        set_all_hello_dungeons(self)
-        set_all_pc_dungeons(self)
-        set_all_eden_dungeons(self)
+        devin.setup_regions()
+        devin.setup_dungeon_entrace()
+        devin.setup_locations()
+        #devin.create_dungeon_exits()
+        #set_all_planeptune_dungeons(self)
+        #set_all_lastation_dungeons(self)
+        #set_all_lowee_dungeons(self)
+        #set_all_leanbox_dungeons(self)
+        #set_all_hyper_dungeons(self)
+        #set_all_hello_dungeons(self)
+        #set_all_pc_dungeons(self)
+        #set_all_eden_dungeons(self)
         set_win_condition(self)
 
 
@@ -71,9 +73,15 @@ class NepRb3World(World):
         item_pool.append(self.create_item(ItemNames.plutia_doll))
         item_pool.append(self.create_item(ItemNames.peashys_drawing))
         for DungeonName in dungeonItemList.keys():
-            item_pool.append(self.create_item(DungeonName))
+            if "Safe Zone" in DungeonName:
+                self.multiworld.push_precollected(self.create_item(DungeonName))
+            else:
+                item_pool.append(self.create_item(DungeonName))
         # Starting Character
-        starting_character = self.random.choice(list(characterItemList.keys()))
+        if self.options.random_character.value > 0:
+            starting_character = self.random.choice(list(characterItemList.keys()))
+        else:
+            starting_character = CharacterNames.neptune
         self.multiworld.push_precollected(self.create_item(starting_character))
         self.starting_character = characterItemList[starting_character].code - apCharacterItemBaseID
 
