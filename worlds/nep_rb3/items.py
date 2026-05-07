@@ -2289,6 +2289,7 @@ dungeonItemList: dict[str, NepRb3ItemData] = {
     ItemNames.dungeon_unlock_67: NepRb3ItemData(apDungeonItemBaseID + 67,  ItemClassification.progression),
 }
 
+
 characterItemList: dict[str, NepRb3ItemData] = {
     CharacterNames.neptune:      NepRb3ItemData(apCharacterItemBaseID + 1, ItemClassification.progression), # Don't think the ID's are correct
     CharacterNames.plutia:       NepRb3ItemData(apCharacterItemBaseID + 2, ItemClassification.progression), # Need to check later

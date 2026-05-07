@@ -50,10 +50,8 @@ class NepRb3World(World):
         self.disabled_locations = set()
         # Create regions.
         devin = Nep3RegionDef(self.multiworld,self.player,self.options)
-        devin.setup_regions()
-        devin.setup_dungeon_entrace()
-        devin.setup_locations()
-        #devin.create_dungeon_exits()
+        devin.setup_region_and_locations()
+        devin.create_dungeon_exits()
         #set_all_planeptune_dungeons(self)
         #set_all_lastation_dungeons(self)
         #set_all_lowee_dungeons(self)
