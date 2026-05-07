@@ -47,16 +47,21 @@ class Nep3RegionDef:
 
     def create_monster_regions_and_connect(self):
         for monsters in self.monsterRegion.values():
+            newLoc = Rb3Location(self.player, monsters[0].objectiven_name, monsters[0].id)
+
             if len(monsters) > 1:
                 newMonsterRegion = self.create_region(monsters[0].objectiven_name)
                 self.multiworld.regions.append(newMonsterRegion)
                 for monster in monsters:
                     self.regions[monster.region].add_exits([newMonsterRegion.name],{newMonsterRegion.name:lambda _:True})
-                monsters[0].name = monsters[0].objectiven_name
-                newMonsterRegion.locations.append(self.create_location(monsters[0],newMonsterRegion))
+                newMonsterRegion.locations.append(newLoc)
+                newLoc.parent_region = newMonsterRegion
+                self.multiworld.worlds[self.player].location_name_to_id[newLoc.name] = newLoc.address
             else:
                 region = self.regions[monsters[0].region]
-                region.locations.append(self.create_location(monsters[0],region))
+                newLoc.parent_region = region
+                region.locations.append(newLoc)
+                self.multiworld.worlds[self.player].location_name_to_id[newLoc.name] = newLoc.address
 
     def create_level_events(self):
         dungeonGrindCapList:List[LocationData] =levels
@@ -90,4 +95,3 @@ class Nep3RegionDef:
             per_region.setdefault(location.region, []).append(location)
 
         return per_region
-

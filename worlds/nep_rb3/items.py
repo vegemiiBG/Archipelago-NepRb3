@@ -66,7 +66,7 @@ item_data: dict[str, NepRb3ItemData] = {
     ItemNames.neps_pudding:                              NepRb3ItemData(203,ItemClassification.progression), ## Required item for Goaling
     ItemNames.compas_syringe:                            NepRb3ItemData(204,ItemClassification.progression), ## Required item for Goaling
     ItemNames.ifs_notebook:                              NepRb3ItemData(205,ItemClassification.progression), ## Required item for Goaling
-    ItemNames.plutia_doll:                               NepRb3ItemData(206,ItemClassification.progression), ## Required item for Goaling
+    ItemNames.stuffed_doll:                              NepRb3ItemData(206,ItemClassification.progression), ## Required item for Goaling
     ItemNames.peashys_drawing:                           NepRb3ItemData(210,ItemClassification.progression), ## Required item for Goaling
     ItemNames.medal_a:                                   NepRb3ItemData(211,ItemClassification.useful), ## Useful for discs for idea chips
     ItemNames.medal_b:                                   NepRb3ItemData(212,ItemClassification.useful),
