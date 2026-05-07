@@ -7,11 +7,16 @@ class PostGameRequired(DefaultOnToggle):
     display_name = "Post Game Required"
 
 
+class RandomizedStartCharacter(Toggle):
+    """If enabled, starting character is randomized."""
+    display_name = "Randomized Start Character"
+
+
 
 @dataclass
 class NepRb3Options(PerGameCommonOptions):
     start_inventory_from_pool: StartInventoryPool
     post_game_required: PostGameRequired
-
+    random_character:   RandomizedStartCharacter
     # DeathLink is always on. Always.
     # death_link: DeathLink

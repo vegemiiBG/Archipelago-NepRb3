@@ -1,7 +1,7 @@
 from typing import NamedTuple, Optional
 
 from BaseClasses import Item, ItemClassification
-from .names import ItemNames, CharacterNames, progressiveGear
+from .names import ItemNames, CharacterNames, progressiveGear,DungeonIDs
 apDungeonItemBaseID = 2_000_000
 apCharacterItemBaseID = 3_000_000
 progressiveGearBaseID = 3_500_000
@@ -2289,6 +2289,7 @@ dungeonItemList: dict[str, NepRb3ItemData] = {
     ItemNames.dungeon_unlock_67: NepRb3ItemData(apDungeonItemBaseID + 67,  ItemClassification.progression),
 }
 
+
 characterItemList: dict[str, NepRb3ItemData] = {
     CharacterNames.neptune:      NepRb3ItemData(apCharacterItemBaseID + 1, ItemClassification.progression), # Don't think the ID's are correct
     CharacterNames.plutia:       NepRb3ItemData(apCharacterItemBaseID + 2, ItemClassification.progression), # Need to check later
@@ -2323,3 +2324,9 @@ useful_items = [name for name,data in item_data.items() if data.type == ItemClas
 
 item_name_to_id = {name: data.code for name, data in allItemData.items()}
 item_id_to_name = {data.code:name for name, data in allItemData.items()}
+
+def DungeonUnlockExists(dungeon:str) ->bool:
+    if dungeon in DungeonIDs.all_dungeons:
+        if DungeonIDs.all_dungeons[dungeon] + apDungeonItemBaseID in item_id_to_name:
+            return True
+    return False
