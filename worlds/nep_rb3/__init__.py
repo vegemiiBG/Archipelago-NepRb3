@@ -109,7 +109,7 @@ class NepRb3World(World):
             item_pool.append(self.create_item(progressiveGear.rom_progressive_gear))
         for i in range(0,4):
             item_pool.append(self.create_item(progressiveGear.ram_progressive_gear))
-        for i in range(0,6):
+        for i in range(0,5):
             item_pool.append(self.create_item(progressiveGear.progressive_armor))
 
         numbersOfItemsInTheGame = len(self.multiworld.get_unfilled_locations(self.player))
