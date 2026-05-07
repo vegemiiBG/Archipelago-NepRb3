@@ -281,7 +281,7 @@ def set_all_eden_dungeons(world: "NepRb3World") -> None:
     eden_koagura_plateau = world.get_entrance(DungeonNames.koagura_plateau)
     
     world.set_rule(eden_magma_cave, lambda state: checkDungeonRequirements(2750, state, world.player)        and hasDungeonUnlocked(state,world.player,DungeonNames.magma_cave) and hasLevel(50, state, world.player))
-    world.set_rule(eden_magma_cave_depths, lambda state: state.can_reach_region(DungeonNames.magma_cave,world.player) and checkDungeonRequirements(2750, state, world.player) and hasLevel(50, state, world.player)
+    world.set_rule(eden_magma_cave_depths, lambda state: state.can_reach_region(DungeonNames.magma_cave,world.player) and checkDungeonRequirements(2750, state, world.player) and hasLevel(50, state, world.player))
     world.set_rule(eden_extradimensional_space, lambda state: checkDungeonRequirements(2750, state, world.player)        and hasDungeonUnlocked(state,world.player,DungeonNames.extradimensional_space) and hasLevel(60, state, world.player))
     world.set_rule(eden_graphic_pass, lambda state: checkDungeonRequirements(2750, state, world.player)        and hasDungeonUnlocked(state,world.player,DungeonNames.graphic_pass) and hasLevel(60, state, world.player))
     world.set_rule(eden_graphic_peak, lambda state: state.can_reach_region(DungeonNames.graphic_pass,world.player) and checkDungeonRequirements(2750, state, world.player) and hasLevel(60, state, world.player))
