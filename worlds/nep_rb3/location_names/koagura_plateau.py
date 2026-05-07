@@ -24,5 +24,5 @@ LocationData("Koagura Plateau","Gray Wolf", 183, "Enemy"),
 LocationData("Koagura Plateau","Viral Gray Wolf", 189, "Enemy"),
 LocationData("Koagura Plateau","Gyps", 117, "Enemy"),
 LocationData("Koagura Plateau","Viral Eerie Bird", 112, "Enemy"),
-LocationData("Koagura Plateau","Cerberus", 435, "Big Enemy"),
+LocationData("Koagura Plateau","Cerberus 2", 435, "Big Enemy"),
 )

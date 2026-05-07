@@ -18,7 +18,7 @@ LocationData("Gigo Depths","Treasure 5", 18_5, "Treasure"),
 )
 GigoDepthsEnemies: typing.List[LocationData] = (
 LocationData("Gigo Depths","Malvader", 154, "Enemy"),
-#LocationData("Gigo Depths","SHDC", 327, "Enemy"), Cant find enemy
+LocationData("Gigo Depths","SHDC", 140, "Enemy"),
 LocationData("Gigo Depths","Swallowtail", 331, "Enemy"),
 LocationData("Gigo Depths","Viral Swallowtail ", 335, "Enemy"),
 LocationData("Gigo Depths","Horsebird", 329, "Enemy"),
