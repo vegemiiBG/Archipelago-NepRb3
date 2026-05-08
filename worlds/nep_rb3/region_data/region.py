@@ -14,7 +14,7 @@ all_dungeon_regions:List[RegionData] = [
     #planeptune
     RegionData(jet_set_range,                       250,    1,   0,    jet_set_peak                    ),
     RegionData(otori_forest,                        1,      0,  000                                    ),
-    RegionData(zeca_ruins_no1,                      250,    1,  000                                    ),
+    RegionData(zeca_ruins_no1,                      250,    0,  000                                    ),
     RegionData(zeca_ruins_no2,                      500,    1,  10                                     ),
     RegionData(haneda_mountain_range,               2750,   2,  50,    haneda_mountain_peak            ),
     RegionData(haneda_mountain_peak,                2750,   2,  50,    haneda_mountain_range           ),
