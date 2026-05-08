@@ -84,29 +84,53 @@ def HyperCandidatesStrength(ProgressiveTier:int): # Uni, Rom, Ram
         return 2350
     return 1150
 
+def ArmorStrength(ProgressiveArmor:int): # All armor
+    if ProgressiveArmor == 1:
+        return 500
+    elif ProgressiveArmor == 2:
+        return 1100
+    elif ProgressiveArmor == 3:
+        return 1450
+    elif ProgressiveArmor == 4:
+        return 1750
+    elif ProgressiveArmor == 5:
+        return 2350
+    return 100
+
 def checkDungeonRequirements (PowerRequirement: int, state:CollectionState, player:int,ArmorRequirement:int = 1):
     playerStrength = 0
     characterStrength = []
+    armorStrength = []
     if state.has(CharacterNames.neptune, player):
         characterStrength.append(StartingCharactersStrength(state.count(progressiveGear.neptune_progressive_gear,player)))
+        
     if state.has(CharacterNames.nepgear, player):
         characterStrength.append(MidCharactersStrength(state.count(progressiveGear.nepgear_progressive_gear,player)))
+        
     if state.has(CharacterNames.plutia, player):
         characterStrength.append(StartingCharactersStrength(state.count(progressiveGear.plutia_progressive_gear,player)))
+        
     if state.has(CharacterNames.noire, player):
         characterStrength.append(StartingCharactersStrength(state.count(progressiveGear.noire_progressive_gear,player)))
+        
     if state.has(CharacterNames.blanc,player):
         characterStrength.append(MidCharactersStrength(state.count(progressiveGear.blanc_progressive_gear,player)))
+        
     if state.has(CharacterNames.vert,player):
         characterStrength.append(MidCharactersStrength(state.count(progressiveGear.vert_progressive_gear,player)))
+        
     if state.has(CharacterNames.peashy,player):
         characterStrength.append(freakingPeashyStrength(state.count(progressiveGear.peashy_progressive_gear,player)))
+        
     if state.has(CharacterNames.uni,player):
         characterStrength.append(HyperCandidatesStrength(state.count(progressiveGear.uni_progressive_gear,player)))
+        
     if state.has(CharacterNames.rom,player):
         characterStrength.append(HyperCandidatesStrength(state.count(progressiveGear.rom_progressive_gear,player)))
+        
     if state.has(CharacterNames.ram,player):
         characterStrength.append(HyperCandidatesStrength(state.count(progressiveGear.ram_progressive_gear,player)))
+        
 
     characterStrength.sort(reverse=True)
     armorTier = state.count(progressiveGear.progressive_armor,player)
