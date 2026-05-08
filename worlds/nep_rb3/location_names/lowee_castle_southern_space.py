@@ -17,10 +17,10 @@ LocationData("Lowee Castle Southern Space","Treasure 4", 45_4, "Treasure"),
 LocationData("Lowee Castle Southern Space","Treasure 5", 45_5, "Treasure"),
 )
 LoweeCastleSouthernSpaceEnemies: typing.List[LocationData] = (
-LocationData("Lowee Castle Southern Space","Auto-Surveillance ", 127, "Enemy"),
-LocationData("Lowee Castle Southern Space","Lost Girl ", 221, "Enemy"),
-LocationData("Lowee Castle Southern Space","Lost Boy ", 210, "Enemy"),
-LocationData("Lowee Castle Southern Space","Ruins Guardian ", 159, "Enemy"),
-LocationData("Lowee Castle Southern Space","Viral Ruins Guardian ", 167, "Enemy"),
-LocationData("Lowee Castle Southern Space","Ruins Dragon ", 404, "Big Enemy"),
+LocationData("Lowee Castle Southern Space","Auto-Surveillance", 127, "Enemy"),
+LocationData("Lowee Castle Southern Space","Lost Girl", 221, "Enemy"),
+LocationData("Lowee Castle Southern Space","Lost Boy", 210, "Enemy"),
+LocationData("Lowee Castle Southern Space","Ruins Guardian", 159, "Enemy"),
+LocationData("Lowee Castle Southern Space","Viral Ruins Guardian", 167, "Enemy"),
+LocationData("Lowee Castle Southern Space","Ruins Dragon", 404, "Big Enemy"),
 )
