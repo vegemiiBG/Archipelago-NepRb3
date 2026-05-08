@@ -16,5 +16,7 @@ class LocationData:
             self.id = self.id + treasure_base_id
         if itemType =="Enemy":
             self.id = self.id + enemy_base_id
+            self.name = self.objectiven_name
         if itemType =="Big Enemy":
             self.id = self.id + enemy_base_id
+            self.name = self.objectiven_name
