@@ -24,8 +24,8 @@ LocationData("Otori Cave","Aimable", 200, "Enemy"),
 LocationData("Otori Cave","Earth Lizard ", 158, "Enemy"),      
 LocationData("Otori Cave","Viral Earth Lizard ", 166, "Enemy"),
 LocationData("Otori Cave","Numb Dogoo", 108, "Enemy"),
-LocationData("Otori Cave","Missile Golem ", 252, "Enemy"),     
-LocationData("Otori Cave","Viral Missile Golem ", 240, "Enemy"),
+LocationData("Otori Cave","Missile Golem ", 160, "Enemy"),     
+LocationData("Otori Cave","Viral Missile Golem ", 168, "Enemy"),
 LocationData("Otori Cave","Thunderbird", 416, "Big Enemy"),
 
 
