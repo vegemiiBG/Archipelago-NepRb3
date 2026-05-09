@@ -23,7 +23,7 @@ class TestLocationCheck(Nep3RBTestBase):
         self.collect(gear)
         self.collect(gear)
         self.assertFalse(self.can_reach_location(location))
-        goalItems = [self.get_item_by_name(ItemNames.neps_pudding),self.get_item_by_name(ItemNames.compas_syringe),self.get_item_by_name(ItemNames.ifs_notebook),self.get_item_by_name(ItemNames.plutia_doll),self.get_item_by_name(ItemNames.peashys_drawing)]
+        goalItems = [self.get_item_by_name(ItemNames.neps_pudding),self.get_item_by_name(ItemNames.compas_syringe),self.get_item_by_name(ItemNames.ifs_notebook),self.get_item_by_name(ItemNames.stuffed_doll),self.get_item_by_name(ItemNames.peashys_drawing)]
         self.collect(goalItems)
         self.assertTrue(self.can_reach_location(location))
     

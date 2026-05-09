@@ -73,7 +73,6 @@ class Nep3RegionDef:
                 region = self.regions[monsters[0].region]
                 newLoc.parent_region = region
                 region.locations.append(newLoc)
-            self.multiworld.worlds[self.player].location_name_to_id[newLoc.name] = newLoc.address
 
     def create_level_events(self):
         dungeonGrindCapList:List[LocationData] =levels
