@@ -21,8 +21,8 @@ LocationData("Otori Cave","Treasure 5", 28_5, "Treasure"),
 )
 OtoriCaveEnemies: typing.List[LocationData] = (
 LocationData("Otori Cave","Aimable", 200, "Enemy"),
-LocationData("Otori Cave","Earth Lizard ", 158, "Enemy"),      
-LocationData("Otori Cave","Viral Earth Lizard ", 166, "Enemy"),
+LocationData("Otori Cave","Earth Lizard ", 271, "Enemy"),      
+LocationData("Otori Cave","Viral Earth Lizard ", 281, "Enemy"),
 LocationData("Otori Cave","Numb Dogoo", 108, "Enemy"),
 LocationData("Otori Cave","Missile Golem ", 160, "Enemy"),     
 LocationData("Otori Cave","Viral Missile Golem ", 168, "Enemy"),
