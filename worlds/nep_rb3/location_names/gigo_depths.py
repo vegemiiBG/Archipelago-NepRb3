@@ -20,7 +20,7 @@ GigoDepthsEnemies: typing.List[LocationData] = (
 LocationData("Gigo Depths","Malvader", 154, "Enemy"),
 LocationData("Gigo Depths","SHDC", 140, "Enemy"),
 LocationData("Gigo Depths","Swallowtail", 331, "Enemy"),
-LocationData("Gigo Depths","Viral Swallowtail ", 335, "Enemy"),
+LocationData("Gigo Depths","Viral Swallowtail", 335, "Enemy"),
 LocationData("Gigo Depths","Horsebird", 329, "Enemy"),
-LocationData("Gigo Depths","King Crab ", 436, "Big Enemy"),
+LocationData("Gigo Depths","King Crab", 436, "Big Enemy"),
 )

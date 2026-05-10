@@ -22,6 +22,6 @@ LocationData("PS Dimension","Plam-met", 318, "Enemy"),
 LocationData("PS Dimension","High Heal Dogoo", 107, "Enemy"),
 LocationData("PS Dimension","Cuberial", 260, "Enemy"),
 LocationData("PS Dimension","Dragon Warrior", 269, "Enemy"),     
-LocationData("PS Dimension","Viral Dragon Warrior ", 279, "Enemy"),
+LocationData("PS Dimension","Viral Dragon Warrior", 279, "Enemy"),
 LocationData("PS Dimension","Giant Dogoo", 517, "Big Enemy"),
 )

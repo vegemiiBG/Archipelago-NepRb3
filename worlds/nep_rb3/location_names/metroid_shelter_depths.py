@@ -23,5 +23,5 @@ LocationData("Metroid Shelter Depths","Blinky", 211, "Enemy"),
 LocationData("Metroid Shelter Depths","Ms. Blinky", 222, "Enemy"),
 LocationData("Metroid Shelter Depths","Volcano Crab", 300, "Enemy"),
 LocationData("Metroid Shelter Depths","Viral Volcano Crab", 303, "Enemy"),
-LocationData("Metroid Shelter Depths","Flame Fenrir ", 430, "Big Enemy"),
+LocationData("Metroid Shelter Depths","Flame Fenrir", 430, "Big Enemy"),
 )

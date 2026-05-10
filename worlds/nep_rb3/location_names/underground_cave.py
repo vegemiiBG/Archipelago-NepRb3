@@ -25,5 +25,5 @@ LocationData("Underground Cave","Viral Earth Golem", 166, "Enemy"),
 LocationData("Underground Cave","Aluna", 245, "Enemy"),
 LocationData("Underground Cave","Viral Aluna", 252, "Enemy"),
 LocationData("Underground Cave","Strange Person", 240, "Enemy"),
-LocationData("Underground Cave","Self-Defense System ", 420, "Big Enemy"),
+LocationData("Underground Cave","Self-Defense System", 420, "Big Enemy"),
 )

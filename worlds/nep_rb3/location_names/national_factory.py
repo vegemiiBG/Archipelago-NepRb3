@@ -16,7 +16,7 @@ LocationData("National Factory","Treasure 3", 20_3, "Treasure"),
 LocationData("National Factory","Treasure 4", 20_4, "Treasure"),
 )
 NationalFactoryEnemies: typing.List[LocationData] = (
-LocationData("National Factory","High Bit Custom ", 153, "Enemy"),
+LocationData("National Factory","High Bit Custom", 126, "Enemy"),
 LocationData("National Factory","Inky", 209, "Enemy"),
 LocationData("National Factory","Ms. Inky", 220, "Enemy"),
 LocationData("National Factory","DSTT", 141, "Enemy"),
