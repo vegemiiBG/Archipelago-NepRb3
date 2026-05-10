@@ -423,7 +423,7 @@ item_data: dict[str, NepRb3ItemData] = {
     ItemNames.symbol_attack_gains_plan:                  NepRb3ItemData(605,ItemClassification.useful),
     ItemNames.null_back_attack_plan:                     NepRb3ItemData(606,ItemClassification.useful),
     ItemNames.guaranteed_symbol_attack_plan:             NepRb3ItemData(607,ItemClassification.useful),
-    ItemNames.jumping_star_plan:                         NepRb3ItemData(608,ItemClassification.useful),
+    ItemNames.jumping_star_plan:                         NepRb3ItemData(608,ItemClassification.progression),
     ItemNames.item_drop_rate_up_plan:                    NepRb3ItemData(609,ItemClassification.useful),
     ItemNames.extra_hidden_treasures_plan:               NepRb3ItemData(610,ItemClassification.useful),
     ItemNames.laplace_eye_plan:                          NepRb3ItemData(611,ItemClassification.useful),
