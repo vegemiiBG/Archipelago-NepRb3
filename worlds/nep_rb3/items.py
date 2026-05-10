@@ -162,7 +162,7 @@ item_data: dict[str, NepRb3ItemData] = {
     ItemNames.agi_booster_z_plan:                        NepRb3ItemData(330,ItemClassification.useful),
     ItemNames.str_booster_plan:                          NepRb3ItemData(331,ItemClassification.useful),
     ItemNames.str_booster_z_plan:                        NepRb3ItemData(332,ItemClassification.useful),
-    ItemNames.life_fragment_plan:                        NepRb3ItemData(333,ItemClassification.progression),
+    ItemNames.life_fragment_plan:                        NepRb3ItemData(333,ItemClassification.useful),
     ItemNames.exuberant_fragment_plan:                   NepRb3ItemData(334,ItemClassification.useful),
     ItemNames.exuberant_lump_plan:                       NepRb3ItemData(335,ItemClassification.useful),
     ItemNames.angel_wings_plan:                          NepRb3ItemData(336,ItemClassification.useful),
