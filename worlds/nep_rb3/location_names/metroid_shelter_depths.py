@@ -18,10 +18,10 @@ LocationData("Metroid Shelter Depths","Treasure 3", 26_3, "Treasure"),
 LocationData("Metroid Shelter Depths","Treasure 4", 26_4, "Treasure"),
 )
 MetroidShelterDepthsEnemies: typing.List[LocationData] = (
-LocationData("Metroid Shelter","Magma Stone", 153, "Enemy"),    
-LocationData("Metroid Shelter","Blinky", 158, "Enemy"),
-LocationData("Metroid Shelter","Ms. Blinky", 166, "Enemy"),
+LocationData("Metroid Shelter Depths","Magma Stone", 153, "Enemy"),    
+LocationData("Metroid Shelter Depths","Blinky", 211, "Enemy"),
+LocationData("Metroid Shelter Depths","Ms. Blinky", 222, "Enemy"),
 LocationData("Metroid Shelter Depths","Volcano Crab", 300, "Enemy"),
 LocationData("Metroid Shelter Depths","Viral Volcano Crab", 303, "Enemy"),
-LocationData("Metroid Shelter","Flame Fenrir ", 420, "Big Enemy"),
+LocationData("Metroid Shelter Depths","Flame Fenrir ", 430, "Big Enemy"),
 )
