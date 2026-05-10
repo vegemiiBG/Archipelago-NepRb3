@@ -19,7 +19,7 @@ LocationData("Keraga Dimension","Treasure 5", 61_5, "Treasure"),
 KeragaDimensionEnemies: typing.List[LocationData] = (
 LocationData("Keraga Dimension","Mega Spider", 312, "Enemy"),
 LocationData("Keraga Dimension","EDGE", 142, "Enemy"), 
-LocationData("Keraga Dimension","Next-gen Bit", 166, "Enemy"),
+LocationData("Keraga Dimension","Next-gen Bit", 128, "Enemy"),
 LocationData("Keraga Dimension","Bundodo Old Man", 242, "Enemy"),
 LocationData("Keraga Dimension","Cyber Dolphin", 409, "Big Enemy"),
 )
