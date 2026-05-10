@@ -17,11 +17,11 @@ LocationData("Halo Forest","Treasure 4", 19_4, "Treasure"),
 LocationData("Halo Forest","Treasure 5", 19_5, "Treasure"),
 )
 HaloForestEnemies: typing.List[LocationData] = (
-LocationData("Halo Forest","Moulin Rogue ", 228, "Enemy"),
+LocationData("Halo Forest","Moulin Rogue", 228, "Enemy"),
 LocationData("Halo Forest","Rukh", 115, "Enemy"),
-LocationData("Halo Forest","Viral Rukh ", 120, "Enemy"),
+LocationData("Halo Forest","Viral Rukh", 120, "Enemy"),
 LocationData("Halo Forest","Tarantula", 311, "Enemy"),
 LocationData("Halo Forest","Wolf", 180, "Enemy"),
-LocationData("Halo Forest","Viral Wolf ", 186, "Enemy"),
+LocationData("Halo Forest","Viral Wolf", 186, "Enemy"),
 LocationData("Halo Forest","Phoenix 2", 414, "Big Enemy"),
 )
