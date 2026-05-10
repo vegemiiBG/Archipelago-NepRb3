@@ -20,10 +20,10 @@ LocationData("Duo R Ruins","Treasure 5", 52_5, "Treasure"),
 LocationData("Duo R Ruins","Treasure 6", 52_6, "Treasure"),
 )
 DuoRRuinsEnemies: typing.List[LocationData] = (
-LocationData("Duo R Ruins","Boxer Cat ", 290, "Enemy"),
+LocationData("Duo R Ruins","Boxer Cat", 290, "Enemy"),
 LocationData("Duo R Ruins","Skull", 137, "Enemy"),
-LocationData("Duo R Ruins","Modded DSTT ", 147, "Enemy"),
-LocationData("Duo R Ruins","Something Tree ", 234, "Enemy"),
-LocationData("Duo R Ruins","Viral Something Tree ", 238, "Enemy"),
+LocationData("Duo R Ruins","Modded DSTT", 147, "Enemy"),
+LocationData("Duo R Ruins","Something Tree", 234, "Enemy"),
+LocationData("Duo R Ruins","Viral Something Tree", 238, "Enemy"),
 LocationData("Duo R Ruins","Vanargandr", 434, "Big Enemy"),
 )

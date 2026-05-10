@@ -19,10 +19,10 @@ LocationData("Soni Wetlands","Treasure 5", 39_5, "Treasure"),
 LocationData("Soni Wetlands","Treasure 6", 39_6, "Treasure"),
 )
 SoniWetlandsEnemies: typing.List[LocationData] = (
-LocationData("Soni Wetlands","Matango ", 265, "Enemy"),  
+LocationData("Soni Wetlands","Matango", 265, "Enemy"),  
 LocationData("Soni Wetlands","Healing Dogoo", 106, "Enemy"),
 LocationData("Soni Wetlands","Lean Tuna", 191, "Enemy"),
 LocationData("Soni Wetlands","Heavy Dragoon", 267, "Enemy"),
 LocationData("Soni Wetlands","Viral Heavy Dragoon", 277, "Enemy"),
-LocationData("Soni Wetlands","Nidhogg", 420, "Big Enemy"),
+LocationData("Soni Wetlands","Nidhogg", 402, "Big Enemy"),
 )

@@ -25,6 +25,6 @@ LocationData("Kobaba Ruins","Leanbox Soldier", 295, "Enemy"),
 LocationData("Kobaba Ruins","Crack Tail", 201, "Enemy"),
 LocationData("Kobaba Ruins","Missile Golem", 160, "Enemy"),
 LocationData("Kobaba Ruins","Viral Missile Golem", 168, "Enemy"),
-LocationData("Kobaba Ruins","Strange Person", 252, "Enemy"),
+LocationData("Kobaba Ruins","Strange Person", 240, "Enemy"),
 LocationData("Kobaba Ruins","Forest Crab", 437, "Big Enemy"),
 )

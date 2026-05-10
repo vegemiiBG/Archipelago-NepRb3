@@ -20,7 +20,7 @@ HanedaMountainPeakEnemies: typing.List[LocationData] = (
 LocationData("Haneda Mountain Peak","Meow", 193, "Enemy"),
 LocationData("Haneda Mountain Peak","High Heal Dogoo", 107, "Enemy"), 
 LocationData("Haneda Mountain Peak","Wild Dog", 181, "Enemy"),
-LocationData("Haneda Mountain Peak","Viral Wild Dog", 245, "Enemy"),
+LocationData("Haneda Mountain Peak","Viral Wild Dog", 187, "Enemy"),
 LocationData("Haneda Mountain Peak","Dragon Warrior", 269, "Enemy"),
 LocationData("Haneda Mountain Peak","Viral Dragon Warrior", 279, "Enemy"),
 LocationData("Haneda Mountain Peak","Fenrir Wolf", 420, "Big Enemy"),

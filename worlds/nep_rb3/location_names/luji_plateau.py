@@ -23,5 +23,5 @@ LocationData("Luji Plateau","Wood Skeleton", 134, "Enemy"),
 LocationData("Luji Plateau","Death Stalker", 270, "Enemy"),
 LocationData("Luji Plateau","Viral Death Stalker", 280, "Enemy"),
 LocationData("Luji Plateau","Hachibei", 261, "Enemy"),
-LocationData("Luji Plateau","1000-Year Turtle ", 441, "Big Enemy"),
+LocationData("Luji Plateau","1000-Year Turtle", 441, "Big Enemy"),
 )

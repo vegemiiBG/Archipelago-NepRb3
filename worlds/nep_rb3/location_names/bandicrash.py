@@ -19,7 +19,7 @@ LocationData("Bandicrash","Treasure 5", 8_5, "Treasure"),
 BandicrashEnemies: typing.List[LocationData] = (
 LocationData("Bandicrash","Terits", 323, "Enemy"),
 LocationData("Bandicrash","Spider", 310, "Enemy"),
-LocationData("Bandicrash","Plum-met ", 317, "Enemy"),
-LocationData("Bandicrash","Tokimeki Sister ", 306, "Enemy"),
+LocationData("Bandicrash","Plum-met", 317, "Enemy"),
+LocationData("Bandicrash","Tokimeki Sister", 306, "Enemy"),
 LocationData("Bandicrash","Phoenix", 412, "Big Enemy"),
 )

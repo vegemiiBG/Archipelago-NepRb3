@@ -23,5 +23,5 @@ LocationData("Halo Forest","Viral Rukh ", 120, "Enemy"),
 LocationData("Halo Forest","Tarantula", 311, "Enemy"),
 LocationData("Halo Forest","Wolf", 180, "Enemy"),
 LocationData("Halo Forest","Viral Wolf ", 186, "Enemy"),
-LocationData("Halo Forest","Phoenix ", 414, "Big Enemy"),
+LocationData("Halo Forest","Phoenix 2", 414, "Big Enemy"),
 )

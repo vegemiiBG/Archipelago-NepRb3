@@ -20,7 +20,7 @@ LoweeCastleInteriorEnemies: typing.List[LocationData] = (
 LocationData("Lowee Castle Interior","Child Wolf", 178, "Enemy"),
 LocationData("Lowee Castle Interior","Viral Child Wolf", 184, "Enemy"),
 LocationData("Lowee Castle Interior","Lowee Defense Guard", 292, "Enemy"),
-LocationData("Lowee Castle Interior","Strange Person ", 240, "Enemy"),
+LocationData("Lowee Castle Interior","Strange Person", 240, "Enemy"),
 LocationData("Lowee Castle Interior","Skeleton", 132, "Enemy"),
 LocationData("Lowee Castle Interior","Fenrir", 427, "Big Enemy"),
 )

@@ -20,7 +20,7 @@ LocationData("Anonydeath's Lab Depths","Treasure 5", 30_5, "Treasure"),
 LocationData("Anonydeath's Lab Depths","Treasure 6", 30_6, "Treasure"),
 )
 AnonydeathsLabDepthsEnemies: typing.List[LocationData] = (
-LocationData("Anonydeath's Lab Depths","Next-gen Bit ", 128, "Enemy"),
-LocationData("Anonydeath's Lab Depths","Bundodo Old Man ", 242, "Enemy"),
+LocationData("Anonydeath's Lab Depths","Next-gen Bit", 128, "Enemy"),
+LocationData("Anonydeath's Lab Depths","Bundodo Old Man", 242, "Enemy"),
 LocationData("Anonydeath's Lab Depths","Panzer", 422, "Big Enemy"),
 )
