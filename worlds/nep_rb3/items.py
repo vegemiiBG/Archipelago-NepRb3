@@ -430,7 +430,7 @@ item_data: dict[str, NepRb3ItemData] = {
     ItemNames.sneaking_scope_plan:                       NepRb3ItemData(612,ItemClassification.useful),
     ItemNames.brow_mania_plan:                           NepRb3ItemData(613,ItemClassification.filler),
     ItemNames.colosseum_unlock_plan:                     NepRb3ItemData(614,ItemClassification.useful),
-    #ItemNames.stellas_dungeon_unlocked_plan:                  NepRb3ItemData(615,ItemClassification.useful), # Useless Items for now
+    ItemNames.stellas_dungeon_unlocked_plan:                  NepRb3ItemData(615,ItemClassification.useful), # Useless Items for now
     #ItemNames.plan_area2key:                                  NepRb3ItemData(616,ItemClassification.useful),
     #ItemNames.plan_area3key:                                  NepRb3ItemData(617,ItemClassification.useful),
     #ItemNames.plan_area4key:                                  NepRb3ItemData(618,ItemClassification.useful),
