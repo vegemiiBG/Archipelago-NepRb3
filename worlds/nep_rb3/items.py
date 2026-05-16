@@ -2319,8 +2319,22 @@ progressiveGearItemList: dict[str, NepRb3ItemData] = {
     progressiveGear.progressive_armor:           NepRb3ItemData(progressiveGearBaseID + 11, ItemClassification.progression),
 }
 
+levelEventList: dict[str, NepRb3ItemData] = {
+    "Level 10": NepRb3ItemData(None, ItemClassification.progression),
+    "Level 20": NepRb3ItemData(None, ItemClassification.progression),
+    "Level 30": NepRb3ItemData(None, ItemClassification.progression),
+    "Level 40": NepRb3ItemData(None, ItemClassification.progression),
+    "Level 50": NepRb3ItemData(None, ItemClassification.progression),
+    "Level 60": NepRb3ItemData(None, ItemClassification.progression),
+    "Level 70": NepRb3ItemData(None, ItemClassification.progression),
+    "Level 80": NepRb3ItemData(None, ItemClassification.progression),
+    "Level 90": NepRb3ItemData(None, ItemClassification.progression),
+    "Level 100": NepRb3ItemData(None, ItemClassification.progression),
+}
 
-allItemData = item_data|dungeonItemList|characterItemList|progressiveGearItemList
+
+allItemData = item_data|dungeonItemList|characterItemList|progressiveGearItemList|levelEventList
+
 filler_items = [name for name,data in item_data.items() if data.type == ItemClassification.filler]
 useful_items = [name for name,data in item_data.items() if data.type == ItemClassification.useful]
 
