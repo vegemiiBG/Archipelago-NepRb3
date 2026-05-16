@@ -20,6 +20,7 @@ JetSetPeakEnemies: typing.List[LocationData] = (
 LocationData("Jet Set Peak","Pal Shell", 195, "Enemy"), 
 LocationData("Jet Set Peak","Shoebill", 113, "Enemy"),
 LocationData("Jet Set Peak","Viral Shoebill", 118, "Enemy"),
+LocationData("Jet Set Peak","Fungus", 264, "Enemy"),
 LocationData("Jet Set Peak","Alraune", 244, "Enemy"),
 LocationData("Jet Set Peak","Viral Alraune", 251, "Enemy"),
 LocationData("Jet Set Peak","Ancient Dragon", 401, "Big Enemy"),
