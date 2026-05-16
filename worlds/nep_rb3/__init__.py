@@ -22,6 +22,7 @@ class NepRb3World(World):
     """Nep."""
 
     game = "Hyperdimension Neptunia Re;Birth3 V GENERATION"
+    ut_can_gen_without_yaml = True
     options: NepRb3Options
     options_dataclass = NepRb3Options
     location_name_to_id = {loc_data.name: loc_data.id for loc_data in all_locations}
@@ -101,11 +102,20 @@ class NepRb3World(World):
             item_pool.append(self.create_item(progressiveGear.progressive_armor))
 
         numbersOfItemsInTheGame = len(self.multiworld.get_unfilled_locations(self.player))
+        itemCreated = []
         while numbersOfItemsInTheGame > len(item_pool):
             if self.random.randrange(0,100) > 55:
-                item_pool.append(self.create_item(useful_items[self.random.randrange(0,len(useful_items))]))
+                item = useful_items[self.random.randrange(0,len(useful_items))]
+                if allItemData[item].unique and item in itemCreated:
+                    continue
+                itemCreated.append(item)
+                item_pool.append(self.create_item(item))
             else:
-                item_pool.append(self.create_item(filler_items[self.random.randrange(0,len(filler_items))]))
+                item = filler_items[self.random.randrange(0,len(useful_items))]
+                if allItemData[item].unique and item in itemCreated:
+                    continue
+                itemCreated.append(item)
+                item_pool.append(self.create_item(item))
         self.multiworld.itempool += item_pool
     
     def get_filler_item_name(self) -> str:
@@ -118,5 +128,24 @@ class NepRb3World(World):
 
     def fill_slot_data(self) -> dict:
         return {
-            "start_character":self.starting_character
+            "start_character":self.starting_character,
+            "options":self.options.get_options()
         }
+    @staticmethod
+    def interpret_slot_data(slot_data: dict[str, Any]) -> dict[str, Any]:
+        # Trigger a regen in UT
+        return slot_data
+    
+    def generate_early(self) -> None:
+        re_gen_passthrough = getattr(self.multiworld, "re_gen_passthrough", {})
+        if re_gen_passthrough and self.game in re_gen_passthrough:
+            # Get the passed through slot data from the real generation
+            slot_data: dict[str, Any] = re_gen_passthrough[self.game]
+
+            slot_options: dict[str, Any] = slot_data.get("options", {})
+            # Set all your options here instead of getting them from the yaml
+            for key, value in slot_options.items():
+                opt: Optional[Option] = getattr(self.options, key, None)
+                if opt is not None:
+                    # You can also set .value directly but that won't work if you have OptionSets
+                    setattr(self.options, key, opt.from_any(value))

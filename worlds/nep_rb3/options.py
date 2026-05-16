@@ -18,5 +18,12 @@ class NepRb3Options(PerGameCommonOptions):
     start_inventory_from_pool: StartInventoryPool
     post_game_required: PostGameRequired
     random_character:   RandomizedStartCharacter
+
+    def get_options(self):
+        return{
+            "start_inventory_from_pool":self.start_inventory_from_pool.value,
+            "post_game_required":self.post_game_required.value,
+            "random_character": self.random_character
+        }
     # DeathLink is always on. Always.
     # death_link: DeathLink

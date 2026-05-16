@@ -13,6 +13,7 @@ class NepRb3ItemData(NamedTuple):
     code: Optional[int] = None
     type: ItemClassification = ItemClassification.filler
     group:str = ""
+    unique:bool = False
 
 
 item_data: dict[str, NepRb3ItemData] = {
