@@ -10,6 +10,7 @@ from BaseClasses import CollectionState, Region
 from worlds.AutoWorld import World
 from worlds.LauncherComponents import Component, Type, components, launch_subprocess
 
+from Options import Option
 from .items import NepRb3Item, item_data, allItemData,apCharacterItemBaseID
 from .locations import NepRb3Location
 from .options import NepRb3Options
