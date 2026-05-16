@@ -22,5 +22,5 @@ LocationData("Gigo Main Entrance","Radisher", 327, "Enemy"),
 LocationData("Gigo Main Entrance","Swallowtail", 331, "Enemy"),
 LocationData("Gigo Main Entrance","Viral Swallowtail", 335, "Enemy"),
 LocationData("Gigo Main Entrance","Horsebird", 329, "Enemy"),
-LocationData("Gigo Main Entrance","King Crab ", 436, "Big Enemy"),
+LocationData("Gigo Main Entrance","King Crab", 436, "Big Enemy"),
 )
