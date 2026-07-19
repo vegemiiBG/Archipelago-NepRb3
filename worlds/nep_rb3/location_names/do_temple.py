@@ -21,6 +21,7 @@ DoTempleEnemies: typing.List[LocationData] = (
 LocationData("Do Temple","Dinosauroid", 275, "Enemy"),
 LocationData("Do Temple","Viral Dinosauroid", 285, "Enemy"),
 LocationData("Do Temple","Shimamo's Brother", 309, "Enemy"),
-LocationData("Do Temple","Promise Keeper", 263, "Enemy"), 
+LocationData("Do Temple","Promise Keeper", 263, "Enemy"),
+LocationData("Do Temple","M-3D", 148, "Enemy"), 
 LocationData("Do Temple","Suzaku", 418, "Big Enemy"),
 )

@@ -21,6 +21,6 @@ LocationData("Nekutoki Forest","Leanbox Soldier", 295, "Enemy"),
 LocationData("Nekutoki Forest","Crack Tail", 201, "Enemy"),
 LocationData("Nekutoki Forest","Missile Golem", 160, "Enemy"),
 LocationData("Nekutoki Forest","Viral Missile Golem", 168, "Enemy"),
-LocationData("Nekutoki Forest","Strange Person", 240, "Enemy"),
+LocationData("Nekutoki Forest","Aimable", 200, "Enemy"),
 LocationData("Nekutoki Forest","Forest Crab", 437, "Big Enemy"),
 )

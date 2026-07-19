@@ -2235,6 +2235,8 @@ item_data: dict[str, NepRb3ItemData] = {
     ItemNames.near_future_chip:                NepRb3ItemData(4281,ItemClassification.filler),
     ItemNames.harem_chip:                      NepRb3ItemData(4282,ItemClassification.filler),
     ItemNames.drill_chip:                      NepRb3ItemData(4283,ItemClassification.filler),
+    ItemNames.polka_dot_swimsuit:              NepRb3ItemData(5049,ItemClassification.filler),
+    ItemNames.shocking_sihouette:              NepRb3ItemData(5047,ItemClassification.filler),
     # fmt: on
 }
 dungeonItemList: dict[str, NepRb3ItemData] = {

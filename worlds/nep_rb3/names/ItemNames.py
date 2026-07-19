@@ -2257,6 +2257,11 @@ near_future_chip                   = "Idea Chips - Near Future"
 harem_chip                         = "Idea Chips - Harem"
 drill_chip                         = "Idea Chips - Drill"
 
+# DLC
+
+polka_dot_swimsuit                 = "Outfits - Polka Dot Swimsuit"
+shocking_sihouette                 = "Outfits - Shocking Sihouette"
+
 #Dungeons
 
 dungeon_unlock_1                   = "Dungeon Unlock - Virtua Forest Safe Zone"
