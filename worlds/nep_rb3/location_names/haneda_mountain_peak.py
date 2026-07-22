@@ -23,5 +23,5 @@ LocationData("Haneda Mountain Peak","Wild Dog", 181, "Enemy"),
 LocationData("Haneda Mountain Peak","Viral Wild Dog", 187, "Enemy"),
 LocationData("Haneda Mountain Peak","Dragon Warrior", 269, "Enemy"),
 LocationData("Haneda Mountain Peak","Viral Dragon Warrior", 279, "Enemy"),
-LocationData("Haneda Mountain Peak","Fenrir Wolf", 420, "Big Enemy"),
+LocationData("Haneda Mountain Peak","Fenrir Wolf", 429, "Big Enemy"),
 )
