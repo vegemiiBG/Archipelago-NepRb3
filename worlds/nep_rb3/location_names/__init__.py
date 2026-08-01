@@ -68,6 +68,7 @@ from .wanderers_cave_depths import *
 from .zeca_ruins_no1 import *
 from .zeca_ruins_no2 import *
 from .zega_forest import *
+from .quests import Quests
 
 gathers: typing.List[LocationData] = (
     AdaldikForest,
@@ -138,6 +139,8 @@ gathers: typing.List[LocationData] = (
     ZecaRuinsNo2,
     ZegaForest,
 )
+
+questLocation: typing.List[LocationData] = Quests
 
 treasures: typing.List[LocationData] = (
     AdaldikForestTreasures,
