@@ -8,7 +8,7 @@ from .options import NepRb3Options
 from .items import item_id_to_name,apDungeonItemBaseID,NepRb3Item,DungeonUnlockExists
 from .names import DungeonIDs
 from .region_data.region import all_dungeon_regions
-from .Rules import createDungeonLogic
+from .Rules import createDungeonLogic,changeDungeon
 if TYPE_CHECKING:
     from . import NepRb3World
 
@@ -17,7 +17,7 @@ class Rb3Location(Location):
 
 
 class Nep3RegionDef:
-    def __init__(self,world:MultiWorld,player:int, options:NepRb3Options):
+    def __init__(self,world:MultiWorld,player:int, options:NepRb3Options,):
         self.multiworld = world
         self.player = player
         self.option = options
@@ -107,6 +107,7 @@ class Nep3RegionDef:
 
     def create_location(self,location_data: LocationData, region: Region) -> Location:
         location = Rb3Location(self.player, location_data.name, location_data.id, region)
+        location.access_rule = lambda state: changeDungeon(region,state,self.player,location_data.dungeonChange)
         #create rule for location?
         return location
 

@@ -4,7 +4,7 @@ enemy_base_id = 2000000
 quest_base_id = 4_500_000
 
 class LocationData:
-    def __init__(self,region, name, id_, itemType):
+    def __init__(self,region, name, id_, itemType,dungeonChange:int=0):
         if itemType == 0:
             itemType = "Gather"
         self.region = region
@@ -12,6 +12,7 @@ class LocationData:
         self.objectiven_name = name
         self.itemType = itemType
         self.id = id_
+        self.dungeonChange = dungeonChange
 
         if itemType == "Treasure":
             self.id = self.id + treasure_base_id

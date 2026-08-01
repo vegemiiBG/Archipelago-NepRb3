@@ -1,26 +1,28 @@
 from BaseClasses import List,Dict
 from ..names.DungeonIDs import all_dungeons
 from ..names.DungeonNames import *
-
+from ..names.ItemNames import *
 class RegionData:
-    def __init__(self,name:str,power:int, defense:int, level:int,partnerRegion:str = None):
+    def __init__(self,name:str,power:int, defense:int, level:int,partnerRegion:str = None,changeDungeon:str = None,bigChangeDungeon:str = None,):
         self.name = name
         self.power = power
         self.defense = defense
         self.level = level
-        self.partnerDungeon = partnerRegion 
+        self.partnerDungeon = partnerRegion
+        self.changeDungeon = changeDungeon
+        self.bigChangeDungeon = bigChangeDungeon 
 
 all_dungeon_regions:List[RegionData] = [
     #planeptune
-    RegionData(jet_set_range,                       250,    1,   0,    jet_set_peak                    ),
+    RegionData(jet_set_range,                       250,    1,   0,    jet_set_peak                    ,changeDungeon=dungeon_change_jet_set_range_plan),
     RegionData(otori_forest,                        1,      0,  000                                    ),
     RegionData(zeca_ruins_no1,                      250,    0,  000                                    ),
     RegionData(zeca_ruins_no2,                      500,    1,  10                                     ),
     RegionData(haneda_mountain_range,               2750,   2,  50,    haneda_mountain_peak            ),
     RegionData(haneda_mountain_peak,                2750,   2,  50,    haneda_mountain_range           ),
     RegionData(otori_cave,                          2300,   2,  50                                     ),
-    RegionData(powerlevel_island,                   3050,   3,  60,    powerlevel_island_interior      ),
-    RegionData(powerlevel_island_interior,          3050,   3,  60,    powerlevel_island               ),
+    RegionData(powerlevel_island,                   3050,   3,  60,    powerlevel_island_interior      ,changeDungeon=dungeon_change_powerlevel_island_plan,bigChangeDungeon=big_dungeon_change_powerlevel_island_plan),
+    RegionData(powerlevel_island_interior,          3050,   3,  60,    powerlevel_island               ,changeDungeon=dungeon_change_powerlevel_island_plan,bigChangeDungeon=big_dungeon_change_powerlevel_island_plan),
     RegionData(digital_future_land,                 5050,   4,  90,    digital_future_depths           ),
     RegionData(digital_future_depths,               5050,   4,  90,    digital_future_land             ),
 
