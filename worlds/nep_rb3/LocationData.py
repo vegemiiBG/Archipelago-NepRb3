@@ -26,14 +26,13 @@ class LocationData:
             self.name = self.objectiven_name
         if itemType == "Quest":
             self.id = self.id+quest_base_id
-            self.name = self.objectiven_name
+            self.name = "Quest - "+self.objectiven_name
             for reg in region:
                 reg = all_dungeon_regions_dict[reg]
                 if dungeonChange == 1:
                     self.plans.append(reg.changeDungeon)
                 if dungeonChange == 2:
                     self.plans.append(reg.bigChangeDungeon)
-            a = 2
         else:
             if dungeonChange == 1:
                 self.plans.append(region.changeDungeon)
