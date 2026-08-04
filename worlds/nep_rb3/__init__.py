@@ -3,7 +3,7 @@ import os
 import pkgutil
 import typing
 import settings
-from .items import dungeonItemList, filler_items, useful_items,characterItemList
+from .items import dungeonItemList, filler_items, useful_items,characterItemList, dungeonChangeList
 from typing import Set, Dict, Any, Callable, Optional
 
 from BaseClasses import CollectionState, Region
@@ -62,6 +62,8 @@ class NepRb3World(World):
         item_pool.append(self.create_item(ItemNames.ifs_notebook))
         item_pool.append(self.create_item(ItemNames.stuffed_doll))
         item_pool.append(self.create_item(ItemNames.peashys_drawing))
+        for ChangeDungeon in dungeonChangeList.keys():
+            item_pool.append(self.create_item(ChangeDungeon))
         for DungeonName in dungeonItemList.keys():
             if "Safe Zone" in DungeonName:
                 self.multiworld.push_precollected(self.create_item(DungeonName))
