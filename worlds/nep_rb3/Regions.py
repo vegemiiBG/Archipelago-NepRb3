@@ -107,7 +107,7 @@ class Nep3RegionDef:
 
     def create_location(self,location_data: LocationData, region: Region) -> Location:
         location = Rb3Location(self.player, location_data.name, location_data.id, region)
-        location.access_rule = lambda state: changeDungeon(region,state,self.player,location_data.dungeonChange)
+        location.access_rule = lambda state: changeDungeon(region,state,self.player,location_data)
         #create rule for location?
         return location
 
