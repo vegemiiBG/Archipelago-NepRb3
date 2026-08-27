@@ -44,7 +44,9 @@ class Nep3RegionDef:
 
     def setup_locations(self):
         for loc in self.locations:
-            if "Quest" in loc.itemType:
+            if "Quest" in loc.itemType: 
+                if self.option.random_quest.value == 0:
+                    continue
                 self.create_quest_location(loc)
                 continue
             region = self.regions[loc.region]
